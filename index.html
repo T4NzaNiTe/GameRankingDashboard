@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 인기/매출 순위 크롤링 시스템</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; background-color: #f3f4f6; }
+        .spinner { border: 4px solid rgba(0, 0, 0, 0.1); width: 36px; height: 36px; border-radius: 50%; border-left-color: #3b82f6; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .hide { display: none; }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-7xl mx-auto">
+        <header class="flex justify-between items-center mb-8 bg-white p-6 rounded-xl shadow-sm">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800"><i class="fa-solid fa-gamepad text-blue-500 mr-2"></i> 글로벌 게임 순위 모니터링</h1>
+                <p class="text-sm text-gray-500 mt-1">Google Play Store & Steam Top 100</p>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="fetchRankings()" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition-colors shadow-sm">
+                    <i class="fa-solid fa-rotate mr-2"></i>순위 업데이트
+                </button>
+            </div>
+        </header>
+
+        <div id="loading" class="hide flex flex-col items-center justify-center py-20">
+            <div class="spinner mb-4"></div>
+            <p class="text-gray-600 font-medium">데이터를 실시간으로 가져오는 중입니다...</p>
+        </div>
+
+        <!-- 2개 분류로 나뉜 대시보드 -->
+        <div id="dashboard" class="grid grid-cols-1 lg:grid-cols-2 gap-6 hide">
+            
+            <!-- 1. Steam (전체) -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 flex flex-col h-[500px]">
+                <div class="bg-slate-800 p-4 text-white flex items-center justify-between">
+                    <h2 class="font-bold text-lg"><i class="fa-brands fa-steam mr-2"></i>Steam (전체)</h2>
+                    <span class="text-xs bg-slate-700 px-2 py-1 rounded">Top 100</span>
+                </div>
+                <div class="overflow-y-auto flex-1 p-0">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-gray-50 sticky top-0 shadow-sm z-10">
+                            <tr>
+                                <th class="p-3 text-xs font-semibold text-gray-600 w-12 text-center">순위</th>
+                                <th class="p-3 text-xs font-semibold text-gray-600">게임명</th>
+                                <th class="p-3 text-xs font-semibold text-gray-600">개발사</th>
+                            </tr>
+                        </thead>
+                        <tbody id="steam-global-list" class="divide-y divide-gray-100"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 2. Play Store (대한민국) -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 flex flex-col h-[500px]">
+                <div class="bg-green-500 p-4 text-white flex items-center justify-between">
+                    <h2 class="font-bold text-lg"><i class="fa-brands fa-google-play mr-2"></i>Play Store (한국)</h2>
+                    <span class="text-xs bg-green-600 px-2 py-1 rounded">Top 100</span>
+                </div>
+                <div class="overflow-y-auto flex-1 p-0">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-gray-50 sticky top-0 shadow-sm z-10">
+                            <tr>
+                                <th class="p-3 text-xs font-semibold text-gray-600 w-12 text-center">순위</th>
+                                <th class="p-3 text-xs font-semibold text-gray-600">게임명</th>
+                                <th class="p-3 text-xs font-semibold text-gray-600">개발사</th>
+                            </tr>
+                        </thead>
+                        <tbody id="play-kr-list" class="divide-y divide-gray-100"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        async function fetchRankings() {
+            document.getElementById('dashboard').classList.add('hide');
+            document.getElementById('loading').classList.remove('hide');
+            
+            const lists = {
+                steamGlobal: document.getElementById('steam-global-list'),
+                playKr: document.getElementById('play-kr-list')
+            };
+            Object.values(lists).forEach(el => el.innerHTML = '');
+
+            try {
+                // crawler.js가 생성한 로컬 data.json 파일 읽기
+                // 주의: 브라우저 보안 정책(CORS)으로 인해 file:// 로 열면 작동하지 않을 수 있습니다. 
+                // VS Code의 Live Server 등으로 열어주세요.
+                const res = await fetch('./data.json?t=' + new Date().getTime());
+                if (!res.ok) {
+                    throw new Error("data.json 파일을 찾을 수 없습니다. 먼저 crawler.js를 실행해주세요.");
+                }
+                const data = await res.json();
+
+                renderPlayStoreTable(lists.playKr, data.playKr || generateMockData('Play Store (한국)'));
+                renderSteamTable(lists.steamGlobal, data.steamGlobal || generateMockData('Steam (전체)'));
+
+                document.getElementById('loading').classList.add('hide');
+                document.getElementById('dashboard').classList.remove('hide');
+
+            } catch (error) {
+                console.error("대시보드 로딩 에러:", error);
+                alert("데이터를 불러오지 못했습니다. 파이썬/Node 크롤러가 먼저 실행되어 data.json이 생성되었는지 확인해주세요.");
+                document.getElementById('loading').classList.add('hide');
+                document.getElementById('dashboard').classList.remove('hide');
+            }
+        }
+
+        function renderPlayStoreTable(container, data) {
+            const slice = data.slice(0, 100);
+            slice.forEach((game, index) => {
+                const row = `
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="p-3 text-center font-bold text-gray-500 text-sm">${index + 1}</td>
+                        <td class="p-3 font-medium text-gray-800 text-sm flex items-center gap-3">
+                            <img src="${game.icon || 'https://via.placeholder.com/24'}" alt="icon" class="w-8 h-8 rounded shadow-sm" onerror="this.src='https://via.placeholder.com/32'">
+                            <span class="truncate w-32 block" title="${game.title || game.name}">${game.title || game.name}</span>
+                        </td>
+                        <td class="p-3 text-xs text-gray-600 truncate max-w-[100px]" title="${game.developer}">${game.developer}</td>
+                    </tr>
+                `;
+                container.insertAdjacentHTML('beforeend', row);
+            });
+        }
+
+        function renderSteamTable(container, data) {
+            const slice = data.slice(0, 100);
+            slice.forEach((game, index) => {
+                const row = `
+                    <tr class="hover:bg-slate-100 transition-colors">
+                        <td class="p-3 text-center font-bold text-gray-500 text-sm">${index + 1}</td>
+                        <td class="p-3 font-medium text-gray-800 text-sm">
+                            <span class="truncate w-32 block" title="${game.name}">${game.name}</span>
+                        </td>
+                        <td class="p-3 text-xs text-gray-600 truncate max-w-[100px]" title="${game.developer}">${game.developer}</td>
+                    </tr>
+                `;
+                container.insertAdjacentHTML('beforeend', row);
+            });
+        }
+
+        function generateMockData(platform) {
+            let mock = [];
+            for(let i=1; i<=100; i++) {
+                mock.push({
+                    title: `데이터 대기중`,
+                    name: `데이터 대기중`,
+                    developer: `-`,
+                    players_2weeks: 100 - i
+                });
+            }
+            return mock;
+        }
+
+        window.onload = fetchRankings;
+    </script>
+</body>
+</html>
