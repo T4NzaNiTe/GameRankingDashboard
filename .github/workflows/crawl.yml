@@ -9,6 +9,8 @@ on:
 jobs:
   crawl-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
       contents: write # 리포지토리 쓰기 권한 (데이터 파일 커밋용)
       pages: write    # GitHub Pages 권한 (웹 대시보드 호스팅)
@@ -21,7 +23,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install Dependencies
         run: npm install
