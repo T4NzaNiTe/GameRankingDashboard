@@ -58,6 +58,8 @@ async function fetchSteamGlobal(retries = 3) {
                                 
                                 const genres = detail.genres;
                                 if (genres && genres.length > 0) game.genre = genres[0].description;
+
+                                if (detail.header_image) game.icon = detail.header_image;
                             }
                         } catch (err) {}
                     }
