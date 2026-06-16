@@ -114,7 +114,15 @@
                 dates.forEach(date => {
                     const option = document.createElement('option');
                     option.value = date;
-                    option.textContent = date;
+                    
+                    // '2026-06-15_23' 형식을 '2026-06-15 23시'로 예쁘게 변환
+                    let displayText = date;
+                    if (date.includes('_')) {
+                        const parts = date.split('_');
+                        displayText = `${parts[0]} ${parts[1]}시`;
+                    }
+                    
+                    option.textContent = displayText;
                     selector.appendChild(option);
                 });
             } catch (e) {
@@ -141,7 +149,7 @@
                 }
                 const data = await res.json();
 
-                // 날짜 업데이트
+                // 날짜 업데이트    
                 document.getElementById('last-updated').textContent = data.lastUpdated + ' 기준';
 
                 renderPlayStoreTable(lists.playKr, data.playKr || generateMockData('Play Store (한국)'));
