@@ -2,9 +2,11 @@ name: Daily Game Rank Crawler
 
 on:
   schedule:
-    # 매일 한국 시간 기준 아침 8시 50분에 실행 (UTC 23:50) - 정각 병목 회피
+    # 예비용 스케줄 (외부 알람 실패 대비 백업, 아침 8시 50분)
     - cron: '50 23 * * *'
-  workflow_dispatch: # 버튼 클릭으로 수동 실행 가능하도록 설정
+  workflow_dispatch: # 수동 실행 버튼
+  repository_dispatch: # 외부 모닝콜 알바생(cron-job)이 전화를 걸 수 있는 '직통 전화' 개통
+    types: [trigger-crawler]
 
 jobs:
   crawl-and-deploy:
