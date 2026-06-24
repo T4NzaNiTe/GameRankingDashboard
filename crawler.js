@@ -14,7 +14,7 @@ const spreadsheetId = SPREADSHEET_URL.match(/\/d\/([a-zA-Z0-9-_]+)/)[1];
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function fetchSteamGlobal(retries = 3) {
-    console.log("스팀(한국) 최고 매출 데이터 가져오는 중...");
+    console.log("스팀(한국) 최고 매출 데이터 가져오는 중..");
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             const res = await fetch("https://store.steampowered.com/search/results/?query&start=0&count=100&filter=topsellers&infinite=1&cc=kr&l=koreana", {
@@ -34,13 +34,14 @@ async function fetchSteamGlobal(retries = 3) {
                     name: title,
                     appId: appId,
                     developer: '-',
-                    genre: '기타' // 기본값 추가
+                    genre: '기본',
+                    price: null
                 });
             });
 
             if (games.length === 0) throw new Error("스팀 데이터가 0건입니다.");
             
-            console.log(`[Steam] 데이터 ${games.length}건 성공! 개발사/장르 정보 추가 중 (약 10~15초 소요)...`);
+            console.log(`[Steam] 데이터 ${games.length}건 성공! 개발사/장르/가격 정보 추가 중(약 10~15초 소요)...`);
             const batchSize = 10;
             for (let i = 0; i < Math.min(100, games.length); i += batchSize) {
                 const batch = games.slice(i, i + batchSize);
@@ -60,6 +61,23 @@ async function fetchSteamGlobal(retries = 3) {
                                 if (genres && genres.length > 0) game.genre = genres[0].description;
 
                                 if (detail.header_image) game.icon = detail.header_image;
+
+                                // 가격 및 할인 정보 파싱 로직 추가
+                                if (detail.is_free) {
+                                    game.price = { final: '무료 (Free)', isFree: true, isDiscounted: false };
+                                } else if (detail.price_overview) {
+                                    const price = detail.price_overview;
+                                    const finalFormatted = price.final_formatted || `₩ ${(price.final / 100).toLocaleString()}`;
+                                    const initialFormatted = price.initial_formatted || finalFormatted;
+                                    game.price = {
+                                        initial: initialFormatted,
+                                        final: finalFormatted,
+                                        discountPercent: price.discount_percent || 0,
+                                        isDiscounted: price.discount_percent > 0
+                                    };
+                                } else {
+                                    game.price = { final: '가격 정보 없음', isDiscounted: false };
+                                }
                             }
                         } catch (err) {}
                     }
@@ -78,7 +96,7 @@ async function fetchSteamGlobal(retries = 3) {
 }
 
 async function fetchPlayStore(country = 'kr', lang = 'ko', retries = 3) {
-    console.log(`구글 플레이스토어(${country}) 최고 매출 데이터 가져오는 중...`);
+    console.log(`구글 플레이스토어(${country}) 최고 매출 데이터 가져오는 중..`);
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             const data = await gplay.list({
@@ -89,14 +107,14 @@ async function fetchPlayStore(country = 'kr', lang = 'ko', retries = 3) {
                 lang: lang
             });
             if (data && data.length > 0) {
-                console.log(`[PlayStore] 데이터 ${data.length}건 성공! 장르 정보 추가 중 (약 10~15초 소요)...`);
+                console.log(`[PlayStore] 데이터 ${data.length}건 성공! 장르 정보 추가 중(약 10~15초 소요)...`);
                 
                 const games = data.map(item => ({
                     title: item.title,
                     appId: item.appId,
                     developer: item.developer,
                     icon: item.icon,
-                    genre: '기타'
+                    genre: '기본'
                 }));
 
                 const batchSize = 10;
@@ -213,8 +231,9 @@ async function writeToGoogleSheets(nowStr, steamGlobal, playKr, retries = 5) {
             
             await sheet.loadCells('A1:H102');
 
+            // 4번째 열에 '스팀 가격 / 할인율' 칼럼 추가
             const headers = [
-                "순위", "스팀(한국) 게임명", "스팀(한국) 개발사", "",
+                "순위", "스팀(한국) 게임명", "스팀(한국) 개발사", "스팀 가격 / 할인율",
                 "순위", "구글(한국) 게임명", "구글(한국) 개발사"
             ];
 
@@ -236,6 +255,12 @@ async function writeToGoogleSheets(nowStr, steamGlobal, playKr, retries = 5) {
                     sheet.getCell(rowIdx, 0).value = i + 1;
                     sheet.getCell(rowIdx, 1).value = steamGlobal[i].name || '';
                     sheet.getCell(rowIdx, 2).value = steamGlobal[i].developer || '';
+                    if (steamGlobal[i].price) {
+                        const p = steamGlobal[i].price;
+                        sheet.getCell(rowIdx, 3).value = p.isDiscounted ? `${p.final} (-${p.discountPercent}%)` : p.final;
+                    } else {
+                        sheet.getCell(rowIdx, 3).value = '-';
+                    }
                 }
                 if (i < playKr.length) {
                     sheet.getCell(rowIdx, 4).value = i + 1;
@@ -287,8 +312,8 @@ async function saveHistory(nowStr, steamGlobal, playKr) {
     if (!historyList.includes(dateStr)) {
         historyList.push(dateStr);
     }
-    // 최신 날짜가 맨 위로 오게 정렬
-    historyList.sort((a, b) => new Date(b.replace('_', ' ')) - new Date(a.replace('_', ' ')));
+    // 최신 날짜가 맨 위로 오게 정렬 (정상 시간 문자열 파싱 패치)
+    historyList.sort((a, b) => new Date(b.replace('_', 'T') + ':00') - new Date(a.replace('_', 'T') + ':00'));
     fs.writeFileSync(listFile, JSON.stringify(historyList, null, 2), 'utf8');
 
     console.log(`✅ 대시보드 데이터 저장 완료! (data.json 및 history/${dateStr}.json)`);
