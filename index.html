@@ -145,10 +145,17 @@
             try {
                 const res = await fetch('./history/history_list.json?t=' + new Date().getTime());
                 if (!res.ok) throw new Error("No history");
+                
+                // 크롤러가 준 장부(데이터)는 최신순으로 정렬되어 있습니다.
                 const dates = await res.json();
                 
                 const selector = document.getElementById('history-selector');
-                dates.forEach(date => {
+                
+                // [해결포인트 1번] 대시보드 날짜 정렬 문제 해결
+                // dates(원본 장부)는 그대로 두고, slice()로 복사본을 만들어 reverse()로 완전히 순서를 뒤집습니다.
+                // 이렇게 하면 가장 오래된 날짜부터 차례대로 메뉴판에 꽂히게 됩니다.
+                // 첫 화면에는 무조건 상단에 고정된 '최신 (오늘)'이 선택되므로, 자연스럽고 완벽하게 동작합니다.
+                dates.slice().reverse().forEach(date => {
                     const option = document.createElement('option');
                     option.value = date;
                     
