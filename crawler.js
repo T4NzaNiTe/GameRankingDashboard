@@ -95,8 +95,23 @@ async function fetchPlayStore(country = 'kr', lang = 'ko', retries = 3) {
                     developer: app.developer,
                     icon: app.icon,
                     appId: app.appId,
-                    genre: app.genre || '기타'
+                    genre: '기타'
                 }));
+
+                const batchSize = 5;
+                for (let i = 0; i < results.length; i += batchSize) {
+                    const batch = results.slice(i, i + batchSize);
+                    await Promise.all(batch.map(async (game) => {
+                        try {
+                            const appDetails = await gplay.app({ appId: game.appId, country: country, lang: lang });
+                            if (appDetails && appDetails.genre) {
+                                game.genre = appDetails.genre;
+                            }
+                        } catch(e) {}
+                    }));
+                    if (i + batchSize < results.length) await delay(500);
+                }
+
                 console.log(`[PlayStore] ${results.length}개 게임 가져오기 완료.`);
                 return results;
             }
