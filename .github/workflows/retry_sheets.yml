@@ -2,8 +2,8 @@ name: Retry Google Sheets Upload
 
 on:
   repository_dispatch:
-    types: [trigger-retry] # 외부 콜(cron-job.org) 전용 직통 전화
-  workflow_dispatch: # 수동 테스트용 버튼
+    types: [trigger-retry]
+  workflow_dispatch: 
 
 jobs:
   retry-sheets:
@@ -12,7 +12,7 @@ jobs:
       run:
         shell: bash
     permissions:
-      contents: write # 깃허브 리포지토리에 보관함(json) 변경사항 커밋용
+      contents: write 
       
     steps:
       - name: Checkout Repository
@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install Dependencies
         run: npm install
@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add pending_sheets.json
+          git add -A
           git diff --quiet && git diff --staged --quiet || git commit -m "📥 밀린 구글 시트 데이터 반영 완료"
           git pull --rebase origin main || true
           git push
