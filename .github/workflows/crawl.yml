@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # 리포지토리 쓰기 권한 (데이터 파일 커밋용)
+      pages: write    # GitHub Pages 권한 (웹 대시보드 호스팅)
+      id-token: write # Pages 배포 인증
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
