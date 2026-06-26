@@ -1,4 +1,54 @@
 {
+  "578080": {
+    "count": 1,
+    "name": "PUBG: BATTLEGROUNDS",
+    "platform": "steam"
+  },
+  "960170": {
+    "count": 1,
+    "name": "DJMAX RESPECT V",
+    "platform": "steam"
+  },
+  "1049590": {
+    "count": 1,
+    "name": "이터널 리턴",
+    "platform": "steam"
+  },
+  "1091500": {
+    "count": 1,
+    "name": "Cyberpunk 2077",
+    "platform": "steam"
+  },
+  "1973530": {
+    "count": 1,
+    "name": "Limbus Company",
+    "platform": "steam"
+  },
+  "2139460": {
+    "count": 1,
+    "name": "Once Human",
+    "platform": "steam"
+  },
+  "3489700": {
+    "count": 1,
+    "name": "스텔라 블레이드™",
+    "platform": "steam"
+  },
+  "3564740": {
+    "count": 1,
+    "name": "연운",
+    "platform": "steam"
+  },
+  "4704690": {
+    "count": 1,
+    "name": "MECCHA CHAMELEON",
+    "platform": "steam"
+  },
+  "4744690": {
+    "count": 1,
+    "name": "DJMAX RESPECT V - V LIBERTY V PACK",
+    "platform": "steam"
+  },
   "steam_MECCHA CHAMELEON": 9,
   "steam_PUBG: BATTLEGROUNDS": 9,
   "steam_블루 아카이브": 9,
@@ -198,5 +248,55 @@
   "steam_War Thunder": 1,
   "steam_텍사스 홀덤 포커: Pokerist": 1,
   "play_SD건담 지 제네레이션 이터널": 1,
-  "play_소울 헌터 키우기 : 방치형 RPG": 1
+  "play_소울 헌터 키우기 : 방치형 RPG": 1,
+  "jp.pokemon.pokemonchampions": {
+    "count": 1,
+    "name": "Pokémon Champions",
+    "platform": "play"
+  },
+  "com.noriworks.gm": {
+    "count": 1,
+    "name": "고스톱M : 데이터 필요없는 맞고 게임",
+    "platform": "play"
+  },
+  "com.oakever.meowdoku": {
+    "count": 1,
+    "name": "Meowdoku: 두뇌 퍼즐 게임",
+    "platform": "play"
+  },
+  "com.mocacorp.tile": {
+    "count": 1,
+    "name": "타일 킹 - 트리플 매치",
+    "platform": "play"
+  },
+  "com.ecffri.arrows": {
+    "count": 1,
+    "name": "애로우즈 – 퍼즐 이스케이프 (Arrows)",
+    "platform": "play"
+  },
+  "com.naddic.bbhero": {
+    "count": 1,
+    "name": "별별히어로 : RPG 맛집",
+    "platform": "play"
+  },
+  "com.mocacorp.sudoku": {
+    "count": 1,
+    "name": "스도쿠",
+    "platform": "play"
+  },
+  "com.oakever.arrows": {
+    "count": 1,
+    "name": "Amaze GO! - 화살표 퍼즐",
+    "platform": "play"
+  },
+  "com.k8games.dreamfurniggl": {
+    "count": 1,
+    "name": "꿈꾸는 가구점: 합성 & 스토리 게임",
+    "platform": "play"
+  },
+  "com.grandgames.magicsort": {
+    "count": 1,
+    "name": "매직 정렬!  (Magic Sort !)",
+    "platform": "play"
+  }
 }
