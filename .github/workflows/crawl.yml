@@ -7,7 +7,10 @@ on:
 
 jobs:
   crawl-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest # 👈 핵심 변경: 구글 IP 차단을 우회하기 위해 윈도우 서버 사용
+    defaults:
+      run:
+        shell: bash # 윈도우 서버에서도 기존 리눅스 명령어(bash)를 쓰도록 강제 설정
     permissions:
       contents: write # 리포지토리 쓰기 권한 (데이터 파일 커밋용)
       pages: write    # GitHub Pages 권한 (웹 대시보드 호스팅)
