@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run fix.js
-        run: node fix.js
+      - name: Run script
+        run: node patch.js
 
       - name: Commit and Push Changes
         run: |
