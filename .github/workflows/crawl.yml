@@ -41,7 +41,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           touch pending_sheets.json
-          git add data.json history/ game_streaks.json pending_sheets.json
+          git add data.json history/ pending_sheets.json
           git diff --quiet && git diff --staged --quiet || git commit -m "🚀 Auto-update game rankings & history"
           git pull --rebase origin main || true
           git push
