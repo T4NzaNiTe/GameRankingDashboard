@@ -1,0 +1,44 @@
+name: Retry Google Sheets Upload
+
+on:
+  repository_dispatch:
+    types: [trigger-retry] # 외부 콜(cron-job.org) 전용 직통 전화
+  workflow_dispatch: # 수동 테스트용 버튼
+
+jobs:
+  retry-sheets:
+    runs-on: macos-latest # 혹시 모를 구글의 우분투/윈도우 IP 차단을 회피하기 위해 맥 서버 사용
+    defaults:
+      run:
+        shell: bash
+    permissions:
+      contents: write # 깃허브 리포지토리에 보관함(json) 변경사항 커밋용
+      
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Create credentials.json from Secret
+        run: echo '${{ secrets.GCP_CREDENTIALS }}' > credentials.json
+
+      - name: Run Retry Script
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: node retry_sheets.js
+
+      - name: Commit Updated pending_sheets.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add pending_sheets.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "📥 밀린 구글 시트 데이터 반영 완료"
+          git pull --rebase origin main || true
+          git push
