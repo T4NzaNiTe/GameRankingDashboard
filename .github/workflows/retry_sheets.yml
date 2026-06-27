@@ -11,11 +11,10 @@ on:
 
 jobs:
   retry-sheets:
-    runs-on: macos-latest
+    # 1. 메인 크롤러와 100% 동일하게 우분투 가상 서버 복귀
+    runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-      # 🚀 [궁극의 백신] Node 24 내장 fetch(undici) 강제 비활성화! (Premature close 영구 차단)
-      NODE_OPTIONS: "--no-experimental-fetch"
     defaults:
       run:
         shell: bash
@@ -27,10 +26,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # 2. 네트워크 소켓이 가장 안정적인 Node.js 20 LTS 버전으로 전격 교체!
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '20'
 
       - name: Install Dependencies
         run: npm install
@@ -38,12 +38,13 @@ jobs:
       - name: Create credentials.json from Secret
         run: echo '${{ secrets.GCP_CREDENTIALS }}' > credentials.json
 
-      - name: Run Retry Script
-        run: node retry_sheets.js
+      # 3. 🚀 [신의 한 수] 스크립트 실행 전 구글 API 서버와 SSL 소켓 미리 예열(Warm-up)!
+      - name: Warm-up Google API Socket & Run Retry Script
+        run: |
+          curl -s https://www.googleapis.com > /dev/null || true
+          node retry_sheets.js
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          # 스크립트 실행 시에도 확실하게 환경변수 전달
-          NODE_OPTIONS: "--no-experimental-fetch"
 
       - name: Commit and Push Updated Pending Sheets
         run: |
