@@ -67,7 +67,7 @@ async function writePendingData() {
     });
 
     const doc = new GoogleSpreadsheet(spreadsheetId, jwt);
-    const retries = 5; // 메인 크롤러와 동일하게 최대 5회 재시도 설정
+    const retries = 5; 
     
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
@@ -87,61 +87,63 @@ async function writePendingData() {
                         if (sheet) {
                             console.log(`[안내] 기존 '${nowStr}' 탭 발견. 삭제를 진행합니다.`);
                             await sheet.delete();
-                            await delay(2000); // 탭 삭제 후 서버 캐시 갱신 대기
+                            await delay(2000); 
                         }
                     } catch(e) {
                         console.log(`[안내] 기존 탭 삭제 중 예외 발생 (무시하고 진행): ${e.message}`);
                     }
 
                     console.log(`[복구 중] '${nowStr}' 이름의 새 시트 탭 생성 중...`);
-                    sheet = await doc.addSheet({
-                        title: nowStr,
-                        headerValues: [
-                            '스팀 순위', '스팀 게임명', '스팀 가격', '스팀 개발사', '스팀 장르', '스팀 변동', '스팀 연속',
-                            '구글 순위', '구글 게임명', '구글 가격', '구글 개발사', '구글 장르', '구글 변동', '구글 연속'
-                        ]
-                    });
+                    // 🚀 메인 크롤러와 100% 동일한 그리드 사이즈로 생성
+                    sheet = await doc.addSheet({ title: nowStr, gridProperties: { rowCount: 105, columnCount: 10 } });
 
                     await delay(2000);
 
-                    const steamData = item.steamGlobal || [];
-                    const googleData = item.googlePlay || [];
-                    const maxLen = Math.max(steamData.length, googleData.length);
-                    const rows = [];
+                    // 🚀 메인 크롤러와 100% 동일한 셀 단위 정밀 로드
+                    await sheet.loadCells('A1:H102');
 
-                    for (let i = 0; i < maxLen; i++) {
-                        const s = steamData[i] || {};
-                        const g = googleData[i] || {};
+                    const headers = [
+                        "순위", "스팀(한국) 게임명", "스팀(한국) 개발사", "",
+                        "순위", "구글(한국) 게임명", "구글(한국) 개발사"
+                    ];
 
-                        let sPrice = "";
-                        if (s.price) {
-                            sPrice = s.price.isFree ? "무료" : (s.price.final || "");
-                        }
-                        let gPrice = "";
-                        if (g.price) {
-                            gPrice = g.price.isFree ? "무료" : (g.price.final || "");
-                        }
+                    // 🚀 1행 A1 셀: 예쁜 대시보드 버튼 서식 완벽 복구
+                    const a1 = sheet.getCell(0, 0);
+                    a1.formula = `=HYPERLINK("${DASHBOARD_URL}", "🖥️ 웹 대시보드 열기")`;
+                    a1.textFormat = { bold: true, fontSize: 12 };
+                    a1.backgroundColor = { red: 0.8, green: 0.9, blue: 1.0 };
 
-                        rows.push({
-                            '스팀 순위': s.name ? `${i + 1}` : '',
-                            '스팀 게임명': s.name || '',
-                            '스팀 가격': sPrice,
-                            '스팀 개발사': s.developer || '',
-                            '스팀 장르': s.genre || '',
-                            '스팀 변동': s.name ? (s.rankChange || 0) : '',
-                            '스팀 연속': s.name ? (s.streak || 1) : '',
-                            '구글 순위': g.name ? `${i + 1}` : '',
-                            '구글 게임명': g.name || '',
-                            '구글 가격': gPrice,
-                            '구글 개발사': g.developer || '',
-                            '구글 장르': g.genre || '',
-                            '구글 변동': g.name ? (g.rankChange || 0) : '',
-                            '구글 연속': g.name ? (g.streak || 1) : ''
-                        });
+                    // 🚀 2행: 헤더 서식 및 연회색 배경 완벽 복구
+                    for(let c = 0; c < headers.length; c++) {
+                        const cell = sheet.getCell(1, c);
+                        cell.value = headers[c];
+                        cell.textFormat = { bold: true };
+                        cell.backgroundColor = { red: 0.9, green: 0.9, blue: 0.9 };
                     }
 
-                    await sheet.addRows(rows);
-                    console.log(`[성공] '${nowStr}' 탭에 ${rows.length}행 데이터 복구 완료.`);
+                    const steamData = item.steamGlobal || [];
+                    // 메인 크롤러 저장 방식(playKr)과 기존 펜딩 방식(googlePlay) 모두 완벽 호환되도록 방어
+                    const googleData = item.playKr || item.googlePlay || [];
+
+                    // 🚀 3행~102행: 메인 크롤러와 100% 동일한 열 배치
+                    for (let i = 0; i < 100; i++) {
+                        const rowIdx = i + 2;
+                        if (i < steamData.length) {
+                            sheet.getCell(rowIdx, 0).value = i + 1;
+                            sheet.getCell(rowIdx, 1).value = steamData[i].name || '';
+                            sheet.getCell(rowIdx, 2).value = steamData[i].developer || '';
+                        }
+                        if (i < googleData.length) {
+                            sheet.getCell(rowIdx, 4).value = i + 1;
+                            // 구글 데이터의 게임명 필드(title 또는 name) 모두 완벽 커버
+                            sheet.getCell(rowIdx, 5).value = googleData[i].title || googleData[i].name || '';
+                            sheet.getCell(rowIdx, 6).value = googleData[i].developer || '';
+                        }
+                    }
+
+                    console.log(`[복구 중] '${nowStr}' 탭에 셀 데이터 저장 중...`);
+                    await sheet.saveUpdatedCells();
+                    console.log(`[성공] '${nowStr}' 탭 복구 및 서식 적용 완료.`);
                     successCount++;
 
                     await delay(2000);
@@ -185,22 +187,21 @@ async function writePendingData() {
                 fs.writeFileSync(pendingFile, '[]');
                 console.log("Successfully wrote pending data and cleared local JSON.");
                 await sendDiscordAlert(`✅ [구글 시트 누락 복구 완료] ${successCount}건의 대기 데이터가 복구되었습니다.`);
-                return; // ◄◄ 정상 복구 및 정렬 완료 시 함수 완전 종료!
+                return; 
             } else {
                 console.log("No items were successfully written in this attempt.");
-                throw new Error("성공한 시트 복구 건수가 0건입니다."); // 재시도 루프로 넘김
+                throw new Error("성공한 시트 복구 건수가 0건입니다.");
             }
 
         } catch (e) {
             console.error(`[Google Sheets] 처리 실패 (시도 ${attempt}/${retries}):`, e.message);
             if (attempt < retries) {
                 console.log("5초 대기 후 재시도합니다...");
-                await delay(5000); // 5초 대기 후 소켓 재연결 시도
+                await delay(5000); 
             }
         }
     }
 
-    // 5회 모두 실패했을 때만 최종 에러 처리
     console.error("❌ 구글 시트 복구 최종 실패 (5회 시도 초과).");
     process.exit(1);
 }
