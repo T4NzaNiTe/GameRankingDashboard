@@ -34,7 +34,7 @@ async function writePendingData() {
     let pendingQueue = [];
     try {
         const rawData = JSON.parse(fs.readFileSync(pendingFile, 'utf8'));
-        // 🚀 [신의 한 수 백신 1] 대괄호 [ ] 없이 단일 객체 { }만 넣어도 무조건 배열로 스마트 자동 변환!!!
+        // 대괄호 [ ] 없이 단일 객체 { }만 넣어도 무조건 배열로 스마트 자동 변환!!!
         pendingQueue = Array.isArray(rawData) ? rawData : [rawData];
     } catch (e) {
         console.error("Failed to parse pending_sheets.json:", e.message);
@@ -80,7 +80,6 @@ async function writePendingData() {
             let successCount = 0;
 
             for (const item of pendingQueue) {
-                // 🚀 [신의 한 수 백신 2] 모든 가능한 날짜 필드명 완벽 커버 및 undefined 탭 생성 원천 차단!
                 const nowStr = item.lastUpdated || item.timestamp || item.date || item.nowStr; 
                 if (!nowStr) {
                     console.error("❌ 날짜(lastUpdated/timestamp) 필드를 찾을 수 없는 데이터입니다. (undefined 탭 생성 차단)");
@@ -92,13 +91,16 @@ async function writePendingData() {
 
                 try {
                     console.log(`[1단계] 충돌 방지용 임시 탭('${tempStr}') 생성 중...`);
+                    // 🚀 열(Column) 개수를 10개로 넉넉히 생성
                     tempSheet = await doc.addSheet({ title: tempStr, gridProperties: { rowCount: 105, columnCount: 10 } });
                     await delay(5000); 
 
-                    await tempSheet.loadCells('A1:H102');
+                    // 🚀 가격과 할인율 열(I열까지 총 9개 열)을 커버하도록 셀 편집 범위 확대!
+                    await tempSheet.loadCells('A1:I102');
 
+                    // 🚀 [가격 + 할인율 헤더 완벽 부활!!!]
                     const headers = [
-                        "순위", "스팀(한국) 게임명", "스팀(한국) 개발사", "",
+                        "순위", "스팀(한국) 게임명", "스팀(한국) 개발사", "가격", "할인율", "",
                         "순위", "구글(한국) 게임명", "구글(한국) 개발사"
                     ];
 
@@ -119,15 +121,23 @@ async function writePendingData() {
 
                     for (let i = 0; i < 100; i++) {
                         const rowIdx = i + 2;
+                        
+                        // 🚀 [스팀 1~50위 데이터: 가격과 할인율 완벽 매핑!!!]
                         if (i < steamData.length) {
                             tempSheet.getCell(rowIdx, 0).value = i + 1;
                             tempSheet.getCell(rowIdx, 1).value = steamData[i].name || '';
                             tempSheet.getCell(rowIdx, 2).value = steamData[i].developer || '';
+                            
+                            const priceObj = steamData[i].price || {};
+                            tempSheet.getCell(rowIdx, 3).value = priceObj.final || (priceObj.isFree ? '무료' : '-');
+                            tempSheet.getCell(rowIdx, 4).value = priceObj.isDiscounted ? `${priceObj.discountPercent}%` : '-';
                         }
+                        
+                        // 🚀 [구글 1~50위 데이터: 5열 빈칸 건너뛰고 6,7,8열에 완벽 매핑!!!]
                         if (i < googleData.length) {
-                            tempSheet.getCell(rowIdx, 4).value = i + 1;
-                            tempSheet.getCell(rowIdx, 5).value = googleData[i].title || googleData[i].name || '';
-                            tempSheet.getCell(rowIdx, 6).value = googleData[i].developer || '';
+                            tempSheet.getCell(rowIdx, 6).value = i + 1;
+                            tempSheet.getCell(rowIdx, 7).value = googleData[i].title || googleData[i].name || '';
+                            tempSheet.getCell(rowIdx, 8).value = googleData[i].developer || '';
                         }
                     }
 
