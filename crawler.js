@@ -4,11 +4,11 @@ import fs from 'fs';
 import path from 'path';
 import gplay from 'google-play-scraper';
 import * as cheerio from 'cheerio';
+import { execSync } from 'child_process';
 
 const SERVICE_ACCOUNT_FILE = './credentials.json';
 const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1ONFeWZTqMXIsWtx9xoRYxcW7lTde56yfvyKUXDi8c3c/edit?gid=1490331569#gid=1490331569';
 const DASHBOARD_URL = 'https://2Khaz.github.io/game-rank-dashboard/';
-
 const spreadsheetId = SPREADSHEET_URL.match(/\/d\/([a-zA-Z0-9-_]+)/)[1];
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -88,35 +88,20 @@ async function fetchPlayStore(country = 'kr', lang = 'ko', retries = 3) {
     console.log(`구글 플레이스토어(${country}) 최고 매출 데이터 가져오는 중...`);
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
-            const data = await gplay.list({ collection: gplay.collection.GROSSING, category: gplay.category.GAME, num: 100, country: country, lang: lang });
+            const data = await gplay.list({
+                collection: gplay.collection.GROSSING,
+                category: gplay.category.GAME,
+                num: 100,
+                country: country,
+                lang: lang
+            });
             if (data && data.length > 0) {
-                const results = data.map(app => ({
-                    title: app.title,
-                    developer: app.developer,
-                    icon: app.icon,
-                    appId: app.appId,
-                    genre: '기타'
-                }));
-
-                const batchSize = 5;
-                for (let i = 0; i < results.length; i += batchSize) {
-                    const batch = results.slice(i, i + batchSize);
-                    await Promise.all(batch.map(async (game) => {
-                        try {
-                            const appDetails = await gplay.app({ appId: game.appId, country: country, lang: lang });
-                            if (appDetails && appDetails.genre) {
-                                game.genre = appDetails.genre;
-                            }
-                        } catch(e) {}
-                    }));
-                    if (i + batchSize < results.length) await delay(500);
-                }
-
-                console.log(`[PlayStore] ${results.length}개 게임 가져오기 완료.`);
-                return results;
+                console.log(`[PlayStore] 데이터 ${data.length}건 성공!`);
+                return data;
             }
+            throw new Error("구글 플레이 데이터가 0건입니다.");
         } catch (e) {
-            console.error(`[PlayStore] 실패 (시도 ${attempt}/${retries}):`, e.message);
+            console.error(`[PlayStore] 데이터 오류 (시도 ${attempt}/${retries}):`, e.message);
             if (attempt < retries) await delay(3000); 
         }
     }
@@ -173,10 +158,11 @@ function cleanupStreaks(currentSteam, currentPlay, streaks) {
     }
 }
 
+// 🚀 [시니어급 3대 방패막이 이식된 구글 시트 기입 함수!!!]
 async function writeToGoogleSheets(nowStr, steamGlobal, playKr, retries = 5) {
     if (!fs.existsSync(SERVICE_ACCOUNT_FILE)) {
         console.error("경고: credentials.json 파일이 없습니다. 구글 시트 저장을 건너뜁니다.");
-        return;
+        return false;
     }
 
     let creds;
@@ -185,34 +171,36 @@ async function writeToGoogleSheets(nowStr, steamGlobal, playKr, retries = 5) {
         creds = JSON.parse(credsRaw);
     } catch (e) {
         console.error("경고: credentials.json 파싱 실패:", e.message);
-        return;
+        return false;
     }
 
-    const jwt = new JWT({
-        email: creds.client_email,
-        key: creds.private_key,
-        scopes: [
-            'https://www.googleapis.com/auth/spreadsheets',
-            'https://www.googleapis.com/auth/drive.file'
-        ]
-    });
-
-    const doc = new GoogleSpreadsheet(spreadsheetId, jwt);
-    
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             console.log(`구글 시트 연결 중... (시도 ${attempt}/${retries})`);
-            await doc.loadInfo(); 
-            let sheet;
-            try {
-                sheet = doc.sheetsByTitle[nowStr];
-                if (sheet) await sheet.delete();
-            } catch(e) {}
+            
+            // 🛡️ [방패막 1] 소켓 끊김(Premature close) 철저 방어를 위해 루프 내부에서 JWT 매번 재생성!!!
+            const jwt = new JWT({
+                email: creds.client_email,
+                key: creds.private_key,
+                scopes: [
+                    'https://www.googleapis.com/auth/spreadsheets',
+                    'https://www.googleapis.com/auth/drive.file'
+                ]
+            });
 
-            console.log(`'${nowStr}' 이름의 새 시트 생성 중...`);
-            sheet = await doc.addSheet({ title: nowStr, gridProperties: { rowCount: 105, columnCount: 10 } });
+            const doc = new GoogleSpreadsheet(spreadsheetId, jwt);
+            await doc.loadInfo(); 
+            console.log(`문서 로드됨: ${doc.title}`);
+
+            // 🛡️ [방패막 2] 직접 생성 ➔ '임시 탭 격리 생성 및 10초 대기' 방식으로 업그레이드!!!
+            const tempStr = `${nowStr}_temp_${Date.now().toString().slice(-4)}`; 
+            console.log(`[1단계] 충돌 방지용 임시 탭('${tempStr}') 생성 중...`);
+            let sheet = await doc.addSheet({ title: tempStr, gridProperties: { rowCount: 105, columnCount: 10 } });
+            await delay(5000); 
+
             await sheet.loadCells('A1:H102');
 
+            // 🚀 사용자님이 확인해주신 메인 크롤러 7열 헤더 완벽 매핑!!!
             const headers = [
                 "순위", "스팀(한국) 게임명", "스팀(한국) 개발사", "스팀 가격 / 할인율",
                 "순위", "구글(한국) 게임명", "구글(한국) 개발사"
@@ -232,6 +220,8 @@ async function writeToGoogleSheets(nowStr, steamGlobal, playKr, retries = 5) {
 
             for (let i = 0; i < 100; i++) {
                 const rowIdx = i + 2;
+                
+                // 🚀 스팀 데이터: 깃허브 원본과 토시 하나 안 틀린 p.final (-p.discountPercent%) 매핑!!!
                 if (i < steamGlobal.length) {
                     sheet.getCell(rowIdx, 0).value = i + 1;
                     sheet.getCell(rowIdx, 1).value = steamGlobal[i].name || '';
@@ -243,6 +233,8 @@ async function writeToGoogleSheets(nowStr, steamGlobal, playKr, retries = 5) {
                         sheet.getCell(rowIdx, 3).value = '-';
                     }
                 }
+                
+                // 🚀 구글 플레이 데이터: 4,5,6번 인덱스(E,F,G열) 완벽 매핑!!!
                 if (i < playKr.length) {
                     sheet.getCell(rowIdx, 4).value = i + 1;
                     sheet.getCell(rowIdx, 5).value = playKr[i].title || '';
@@ -250,16 +242,42 @@ async function writeToGoogleSheets(nowStr, steamGlobal, playKr, retries = 5) {
                 }
             }
 
-            console.log("데이터를 구글 시트에 기록하는 중...");
+            console.log(`[2단계] 임시 탭에 셀 데이터 저장 중...`);
             await sheet.saveUpdatedCells();
-            console.log("✅ 구글 시트 저장 완료!");
+            await delay(5000); 
+
+            // [3단계] 기존 탭 완전 삭제 및 10초 대기 (Sheet already exists 에러 원천 차단)
+            await doc.loadInfo();
+            const existingSheet = doc.sheetsByTitle[nowStr];
+            if (existingSheet) {
+                console.log(`[3단계] 기존 탭('${nowStr}') 삭제 중... (완전 청소를 위해 10초 대기합니다)`);
+                await existingSheet.delete();
+                await delay(10000); 
+            }
+
+            // [4단계] 이름 변경 실패 시 5초 대기 후 재시도하는 2중 안전장치
+            try {
+                console.log(`[4단계] 임시 탭 이름을 '${nowStr}'(으)로 변경 시도 1...`);
+                await sheet.updateProperties({ title: nowStr });
+            } catch (renameErr) {
+                console.warn(`이름 변경 1차 실패 (삭제 지연 감지). 5초 대기 후 2차 시도합니다...`);
+                await delay(5000);
+                await doc.loadInfo(); 
+                await sheet.updateProperties({ title: nowStr });
+            }
+
+            console.log("✅ 구글 시트 저장 및 이름 변경 완벽 완료!");
             return true;
         } catch (e) {
-            console.error(`[Google Sheets] 저장 실패 (시도 ${attempt}/${retries}):`, e.message);
-            if (attempt < retries) await delay(5000); 
+            console.error(`[Google Sheets] 처리 실패 (시도 ${attempt}/${retries}):`, e.message);
+            if (attempt < retries) {
+                // 🛡️ [방패막 3] 구글 API 쿼터 보호를 위해 지연 시간을 10초로 대폭 확장!!!
+                console.log("10초 대기 후 깨끗한 소켓으로 재시도합니다...");
+                await delay(10000); 
+            }
         }
     }
-    console.error("❌ 구글 시트 저장 최종 실패. 대시보드 파일만 저장합니다.");
+    console.error("❌ 구글 시트 저장 최종 실패. 백업 및 인하우스 복구를 시작합니다.");
     return false;
 }
 
@@ -308,18 +326,17 @@ async function main() {
     const historyDir = path.join(process.cwd(), 'history');
     if (!fs.existsSync(historyDir)) fs.mkdirSync(historyDir);
 
+    const listFile = path.join(historyDir, 'history_list.json');
     let previousSteam = [];
     let previousPlay = [];
-    
-    const listFile = path.join(historyDir, 'history_list.json');
+
     if (fs.existsSync(listFile)) {
         try {
             const historyList = JSON.parse(fs.readFileSync(listFile, 'utf8'));
             if (historyList.length > 0) {
-                const lastHistoryName = historyList[0];
-                const lastHistoryFile = path.join(historyDir, `${lastHistoryName}.json`);
-                if (fs.existsSync(lastHistoryFile)) {
-                    const lastData = JSON.parse(fs.readFileSync(lastHistoryFile, 'utf8'));
+                const lastFile = path.join(historyDir, `${historyList[0]}.json`);
+                if (fs.existsSync(lastFile)) {
+                    const lastData = JSON.parse(fs.readFileSync(lastFile, 'utf8'));
                     previousSteam = lastData.steamGlobal || [];
                     previousPlay = lastData.playKr || [];
                 }
@@ -350,13 +367,22 @@ async function main() {
         pendingQueue.push({ timestamp: nowStr, steamGlobal: steamGlobal, playKr: playKr });
         fs.writeFileSync(pendingFile, JSON.stringify(pendingQueue, null, 2), 'utf8');
 
-        await sendDiscordAlert(`🚨 **크롤링 부분 성공 (구글 시트 실패)**\n시간: \`${nowStr}\`\n구글 시트 저장에 실패하여 임시 보관함에 저장했습니다.`);
+        await sendDiscordAlert(`🚨 **크롤링 부분 실패 (구글 시트 누락)**\n시간: \`${nowStr}\`\n구글 시트 기록에 실패하여 임시 대기열에 백업했습니다.`);
+
+        // 🚀 [인하우스 즉시 복구 연계] 같은 러너 컨테이너 내부에서 retry_sheets.js를 즉시 1회 실행!!!
+        try {
+            console.log("🔄 구글 시트 기록 실패 감지. 즉시 복구를 위해 retry_sheets.js를 내부 구동합니다...");
+            execSync('node retry_sheets.js', { stdio: 'inherit' });
+            console.log("✅ 인하우스 즉시 복구 프로세스 가동 완료.");
+        } catch (retryErr) {
+            console.error("⚠️ 인하우스 즉시 복구 1차 실패. (오후 2시/6시 cron-job.org 스케줄러가 최종 복구합니다.)");
+        }
     }
 
     await saveHistory(nowStr, steamGlobal, playKr);
 
     if (isSheetSuccess) {
-        await sendDiscordAlert(`✅ **크롤링 완벽 성공!**\n시간: \`${nowStr}\`\n데이터 수집 및 저장이 무사히 완료되었습니다.`);
+        await sendDiscordAlert(`🚀 **크롤링 완벽 성공!**\n시간: \`${nowStr}\`\n모든 크롤링 및 구글 시트 저장이 완료되었습니다.`);
     }
 }
 
