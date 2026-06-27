@@ -1,6 +1,5 @@
 name: Retry Google Sheets Upload
 
-# [문제 1 해결] 동시성 제어: 워크플로우가 겹쳐 돌지 않도록 순차 큐잉 처리
 concurrency:
   group: git-sync-queue
   cancel-in-progress: false
@@ -12,10 +11,11 @@ on:
 
 jobs:
   retry-sheets:
-    # 🍏 [AI/봇 검열 우회 전략] 가상 서버 환경을 Mac(macos-latest)으로 전격 교체!
     runs-on: macos-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      # 🚀 [궁극의 백신] Node 24 내장 fetch(undici) 강제 비활성화! (Premature close 영구 차단)
+      NODE_OPTIONS: "--no-experimental-fetch"
     defaults:
       run:
         shell: bash
@@ -42,6 +42,8 @@ jobs:
         run: node retry_sheets.js
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # 스크립트 실행 시에도 확실하게 환경변수 전달
+          NODE_OPTIONS: "--no-experimental-fetch"
 
       - name: Commit and Push Updated Pending Sheets
         run: |
