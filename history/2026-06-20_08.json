@@ -1,4 +1,5 @@
-{  "lastUpdated": "2026-06-20 08",
+{
+  "lastUpdated": "2026-06-20 08",
   "steamGlobal": [
     {
       "name": "PUBG: BATTLEGROUNDS",
@@ -6,7 +7,7 @@
       "developer": "PUBG Corporation",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg?t=1781659328",
-      "rankChange": 1,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -15,7 +16,7 @@
       "developer": "lemorion_1224",
       "genre": "캐주얼",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/163e2a742e5fb8e1f5d1e3a890da98f04ab809d4/header.jpg?t=1781108224",
-      "rankChange": -1,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -24,7 +25,7 @@
       "developer": "CD PROJEKT RED",
       "genre": "RPG",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/26b96fa9c8af43189cbecbbc329ade29d9c9cf3e/header_koreana.jpg?t=1769690377",
-      "rankChange": 60,
+      "rankChange": 4,
       "streak": 5
     },
     {
@@ -33,7 +34,7 @@
       "developer": "CD PROJEKT RED",
       "genre": "RPG",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138330/1c4bb324f2f9fb9719da6fa3c393cc413e8db95f/header_koreana.jpg?t=1768305060",
-      "rankChange": "new",
+      "rankChange": 10,
       "streak": 2
     },
     {
@@ -42,7 +43,7 @@
       "developer": "MINTROCKET",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1868140/3f5b136a2a0284a02bdc03533a4041d358c4d7b2/header_alt_assets_2.jpg?t=1781777209",
-      "rankChange": 1,
+      "rankChange": -2,
       "streak": 5
     },
     {
@@ -60,7 +61,7 @@
       "developer": "MINTROCKET",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4394810/5a2a3fa9dba5b2a5b733ea5bccf91c14694caba5/header.jpg?t=1781766044",
-      "rankChange": 5,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -69,7 +70,7 @@
       "developer": "Square Enix",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3483510/9a89762942ab4c2a1c35b5b7cae6da407c0dcaf7/header_koreana.jpg?t=1781812674",
-      "rankChange": 20,
+      "rankChange": -3,
       "streak": 5
     },
     {
@@ -78,7 +79,7 @@
       "developer": "NEOWIZ",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960170/header.jpg?t=1772009068",
-      "rankChange": 4,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -87,7 +88,7 @@
       "developer": "Valve",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1780435263",
-      "rankChange": -5,
+      "rankChange": 10,
       "streak": 5
     },
     {
@@ -96,7 +97,7 @@
       "developer": "NEXON Games Co., Ltd.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2074920/d6ab480d5d08d13363287bfc103ce62e2bb28c65/header.jpg?t=1781267897",
-      "rankChange": 32,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -114,7 +115,7 @@
       "developer": "Playground Games",
       "genre": "레이싱",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2483190/744a52b2f79bb03825dea2c0fcfa29e330bb2f1e/header_alt_assets_1.jpg?t=1781815797",
-      "rankChange": -6,
+      "rankChange": 6,
       "streak": 5
     },
     {
@@ -123,7 +124,7 @@
       "developer": "Square Enix",
       "genre": "RPG",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1004640/2d8e4389e157b62f07bdc7c9468bf04010d574c0/header.jpg?t=1781662166",
-      "rankChange": 54,
+      "rankChange": 9,
       "streak": 5
     },
     {
@@ -132,7 +133,7 @@
       "developer": "ProjectMoon",
       "genre": "기타",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973530/header.jpg?t=1781875403",
-      "rankChange": -5,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -141,7 +142,7 @@
       "developer": "Digital Extremes",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230410/a000b4bf98dde5d51cd44206f1ac21d04841017e/header.jpg?t=1781709800",
-      "rankChange": 11,
+      "rankChange": -6,
       "streak": 5
     },
     {
@@ -150,7 +151,7 @@
       "developer": "Motive",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1693980/header.jpg?t=1777396576",
-      "rankChange": "new",
+      "rankChange": 44,
       "streak": 2
     },
     {
@@ -159,7 +160,7 @@
       "developer": "Behaviour Interactive Inc.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/66727e8249aae119400352d4b1d84928f924939c/header_alt_assets_8.jpg?t=1781795618",
-      "rankChange": 8,
+      "rankChange": -2,
       "streak": 5
     },
     {
@@ -177,8 +178,8 @@
       "developer": "Catfood Studio",
       "genre": "캐주얼",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2739990/1fbfd2722c018e52390981170caaa659d9794940/header_alt_assets_5_koreana.jpg?t=1781665667",
-      "rankChange": "new",
-      "streak": 4
+      "rankChange": -3,
+      "streak": 3
     },
     {
       "name": "GrandChase",
@@ -186,7 +187,7 @@
       "developer": "KOG",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/985810/e19ca81345073cd8531beaf354280d01808b6407/header.jpg?t=1779945167",
-      "rankChange": 2,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -195,7 +196,7 @@
       "developer": "Pearl Abyss",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3321460/905a27028fe2cb3bfbffb7ae006847e8ee4eec53/header_koreana.jpg?t=1781661893",
-      "rankChange": -4,
+      "rankChange": 7,
       "streak": 5
     },
     {
@@ -204,7 +205,7 @@
       "developer": "Battlefield Studios",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2807960/c12d12ce3c7d217398d3fcad77427bfc9d57c570/header.jpg?t=1781611363",
-      "rankChange": "new",
+      "rankChange": 18,
       "streak": 2
     },
     {
@@ -213,7 +214,7 @@
       "developer": "XD",
       "genre": "캐주얼",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/3dc3eb2daa56bacb84f32f186aa50710014212bf/header_alt_assets_0.jpg?t=1781233208",
-      "rankChange": -2,
+      "rankChange": -12,
       "streak": 5
     },
     {
@@ -222,7 +223,7 @@
       "developer": "Blizzard Entertainment, Inc.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/217c51ee328bb2f97c66776bb92b1ddb3d8333fe/header_alt_assets_21.jpg?t=1781633091",
-      "rankChange": 17,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -231,7 +232,7 @@
       "developer": "Hazelight Studios",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001120/header.jpg?t=1763484567",
-      "rankChange": -2,
+      "rankChange": 4,
       "streak": 5
     },
     {
@@ -240,7 +241,7 @@
       "developer": "Sports Interactive",
       "genre": "시뮬레이션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3551340/0b251456ded934f0f78613dcc89bfaa6f06866f5/header_alt_assets_0.jpg?t=1781176251",
-      "rankChange": -2,
+      "rankChange": 11,
       "streak": 5
     },
     {
@@ -249,7 +250,7 @@
       "developer": "EA Canada",
       "genre": "시뮬레이션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3405690/64d362e71693f1ec7023f52ab94026f9a0d4fbed/header.jpg?t=1781720918",
-      "rankChange": -9,
+      "rankChange": 4,
       "streak": 5
     },
     {
@@ -258,7 +259,7 @@
       "developer": "Maxis",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg?t=1778778231",
-      "rankChange": "new",
+      "rankChange": 17,
       "streak": 2
     },
     {
@@ -267,8 +268,8 @@
       "developer": "COGNOSPHERE PTE. LTD.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4162040/2ee1a3c57b9bad4983ed74e438fb19147a4456df/header_koreana.jpg?t=1781647256",
-      "rankChange": "new",
-      "streak": 4
+      "rankChange": -3,
+      "streak": 3
     },
     {
       "name": "FINAL FANTASY VII REMAKE INTERGRADE",
@@ -276,7 +277,7 @@
       "developer": "Square Enix",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1462040/header.jpg?t=1773895755",
-      "rankChange": -1,
+      "rankChange": 9,
       "streak": 5
     },
     {
@@ -285,7 +286,7 @@
       "developer": " New One Studio",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4148240/7f34882b17a2a3e8bba067f2e1a0f281c320fd23/header_koreana.jpg?t=1781677683",
-      "rankChange": -16,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -294,7 +295,7 @@
       "developer": "KONAMI",
       "genre": "시뮬레이션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/6ad0cd0c355a0072e2492c3c4d17e615ac085c02/header.jpg?t=1778872856",
-      "rankChange": -18,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -312,7 +313,7 @@
       "developer": "Paradox Development Studio",
       "genre": "시뮬레이션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394360/67bbd0057627fc2244793bcdd09260c2539499cf/header.jpg?t=1781595476",
-      "rankChange": -15,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -322,7 +323,7 @@
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header_koreana.jpg?t=1777395376",
       "rankChange": "new",
-      "streak": 1
+      "streak": 2
     },
     {
       "name": "연운",
@@ -330,7 +331,7 @@
       "developer": "Everstone Studio",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3564740/57c4616f97e270b88a947ea18682c27af9ae3874/header_koreana.jpg?t=1780895522",
-      "rankChange": -23,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -357,7 +358,7 @@
       "developer": "Respawn",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/0bd74245b869287a2dc7f682e6013f7ed08d98e3/header.jpg?t=1778502442",
-      "rankChange": -9,
+      "rankChange": 7,
       "streak": 5
     },
     {
@@ -375,7 +376,7 @@
       "developer": "Pocketpair",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/058bd87dc17a7179e07c446aa64d0574ca43ab9d/header.jpg?t=1780702171",
-      "rankChange": -9,
+      "rankChange": 13,
       "streak": 5
     },
     {
@@ -384,7 +385,7 @@
       "developer": "Mega Crit",
       "genre": "인디",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg?t=1776735385",
-      "rankChange": -4,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -393,7 +394,7 @@
       "developer": "NEXON Games",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3557620/a43191451225d3122c224a7349f2fc232f46b3d0/header_koreana.jpg?t=1779773548",
-      "rankChange": -41,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -402,7 +403,7 @@
       "developer": "Paradox Development Studio",
       "genre": "시뮬레이션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/2ce9d9d8029bd7b91287876ff46b8963c79a560f/header_alt_assets_13_koreana.jpg?t=1781784917",
-      "rankChange": -28,
+      "rankChange": -8,
       "streak": 5
     },
     {
@@ -411,7 +412,7 @@
       "developer": "Unknown Worlds Entertainment",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962700/header.jpg?t=1780372044",
-      "rankChange": 14,
+      "rankChange": 38,
       "streak": 5
     },
     {
@@ -420,7 +421,7 @@
       "developer": "IO Interactive A/S",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/8ddb6405b2fba0de9acaa145232d53be09fe7259/header_koreana.jpg?t=1780990824",
-      "rankChange": -10,
+      "rankChange": 17,
       "streak": 5
     },
     {
@@ -429,7 +430,7 @@
       "developer": "WRIGHT FLYER STUDIOS",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1973710/header_koreana.jpg?t=1777312914",
-      "rankChange": "new",
+      "rankChange": 20,
       "streak": 2
     },
     {
@@ -438,7 +439,7 @@
       "developer": "Unfrozen",
       "genre": "RPG",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3105440/1b4d6c4d876197e9806177e9853ccb8a13fb8274/header_koreana.jpg?t=1779786083",
-      "rankChange": 1,
+      "rankChange": 23,
       "streak": 5
     },
     {
@@ -447,7 +448,7 @@
       "developer": "CAPCOM Co., Ltd.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3357650/e32e168b25ed68a0cf6264c220c07e96c2abfb56/header.jpg?t=1777351016",
-      "rankChange": 11,
+      "rankChange": "new",
       "streak": 1
     },
     {
@@ -456,7 +457,7 @@
       "developer": "Facepunch Studios",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1781536981",
-      "rankChange": 22,
+      "rankChange": 29,
       "streak": 5
     },
     {
@@ -465,7 +466,7 @@
       "developer": "Battlestate Games",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3932890/e6bcff9e3787f9fc19e46dc06c12c841cf3d4cb7/header_alt_assets_0.jpg?t=1779703783",
-      "rankChange": 1,
+      "rankChange": 14,
       "streak": 5
     },
     {
@@ -474,7 +475,7 @@
       "developer": "Expansive Worlds",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/518790/0c2d5d445419a87f494a0dd0f4756d42292d39bf/header_alt_assets_13_koreana.jpg?t=1781679235",
-      "rankChange": "new",
+      "rankChange": 36,
       "streak": 2
     },
     {
@@ -492,7 +493,7 @@
       "developer": "Rockstar North",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/header_koreana.jpg?t=1781187782",
-      "rankChange": -9,
+      "rankChange": -13,
       "streak": 2
     },
     {
@@ -501,7 +502,7 @@
       "developer": "Team Jade",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2507950/160ce82f08a45810ead13d171062d868a00af0d3/header_alt_assets_11_koreana.jpg?t=1781125135",
-      "rankChange": 25,
+      "rankChange": 42,
       "streak": 2
     },
     {
@@ -519,7 +520,7 @@
       "developer": "Respawn Entertainment",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/header.jpg?t=1779987598",
-      "rankChange": "new",
+      "rankChange": 32,
       "streak": 2
     },
     {
@@ -528,7 +529,7 @@
       "developer": "Studio 397",
       "genre": "레이싱",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399420/f510badbf573eecdf529ae735a49331f4b9919be/header.jpg?t=1780055402",
-      "rankChange": -12,
+      "rankChange": 11,
       "streak": 5
     },
     {
@@ -537,7 +538,7 @@
       "developer": "Klei Entertainment",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/322330/7026cb87b2bfc1e92e72a7875ccbdfd0acd5b3df/header_alt_assets_50.jpg?t=1781363712",
-      "rankChange": -24,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -546,7 +547,7 @@
       "developer": "Firaxis Games",
       "genre": "전략",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg?t=1740607040",
-      "rankChange": 16,
+      "rankChange": -9,
       "streak": 5
     },
     {
@@ -555,8 +556,8 @@
       "developer": "Wargaming Group Limited",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552990/db49087342c8747454a2ec9235be37fc02b85084/header.jpg?t=1781685795",
-      "rankChange": -14,
-      "streak": 3
+      "rankChange": -41,
+      "streak": 5
     },
     {
       "name": "마블 라이벌즈",
@@ -564,7 +565,7 @@
       "developer": "NetEase Games",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/4a41f0888ee8d13bd2aa84a4fa2bf5a4e3e7dc39/header.jpg?t=1781255145",
-      "rankChange": 23,
+      "rankChange": -38,
       "streak": 3
     },
     {
@@ -573,7 +574,7 @@
       "developer": "Klei Entertainment",
       "genre": "인디",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/header.jpg?t=1781198471",
-      "rankChange": -32,
+      "rankChange": -2,
       "streak": 5
     },
     {
@@ -582,8 +583,8 @@
       "developer": "NEOWIZ",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4077430/cbef157d119f021ae4af89356437cf54fd8e2131/header.jpg?t=1766031327",
-      "rankChange": "new",
-      "streak": 5
+      "rankChange": 0,
+      "streak": 4
     },
     {
       "name": "Arma Reforger",
@@ -591,7 +592,7 @@
       "developer": "Bohemia Interactive",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/header.jpg?t=1779966148",
-      "rankChange": "new",
+      "rankChange": 33,
       "streak": 2
     },
     {
@@ -600,7 +601,7 @@
       "developer": "Frontier Developments",
       "genre": "시뮬레이션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2958130/5d0e48e90bbf775d6d3f98edab2ff56b357204da/header_koreana.jpg?t=1781616104",
-      "rankChange": "new",
+      "rankChange": -19,
       "streak": 4
     },
     {
@@ -627,7 +628,7 @@
       "developer": "Infinity Ward",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4435490/1b43b29d30d31ec134f876d30ed1a13706875a25/header_koreana.jpg?t=1781711477",
-      "rankChange": -26,
+      "rankChange": -21,
       "streak": 5
     },
     {
@@ -645,8 +646,8 @@
       "developer": "ConchShip Games",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/838350/03188b1a9e4b6f187839aa9711d01bbddfa9d049/header_koreana.jpg?t=1781692191",
-      "rankChange": "new",
-      "streak": 4
+      "rankChange": -39,
+      "streak": 3
     },
     {
       "name": "R.E.P.O.",
@@ -654,7 +655,7 @@
       "developer": "semiwork",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3241660/a12c92856b71315da885924ea5e1d5290c8025b8/header_alt_assets_2.jpg?t=1778158882",
-      "rankChange": -4,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -663,7 +664,7 @@
       "developer": "ReLU Games, Inc.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2827200/12344cf4308921c50f6603b618dd197a2ec54263/header_alt_assets_1.jpg?t=1781771581",
-      "rankChange": "new",
+      "rankChange": -5,
       "streak": 3
     },
     {
@@ -672,8 +673,8 @@
       "developer": "Gaijin Entertainment",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/ceff9434460880755b42a90b8915e87dff4482ad/header.jpg?t=1781704578",
-      "rankChange": 18,
-      "streak": 4
+      "rankChange": -4,
+      "streak": 3
     },
     {
       "name": "Escape the Backrooms",
@@ -681,8 +682,8 @@
       "developer": "Fancy Games",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1943950/f3dac53a5d3e68a4bb67786872b4693260049b26/header.jpg?t=1781870802",
-      "rankChange": "new",
-      "streak": 5
+      "rankChange": 3,
+      "streak": 4
     },
     {
       "name": "스텔라 블레이드™",
@@ -690,7 +691,7 @@
       "developer": "SHIFT UP Corporation",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/header_koreana.jpg?t=1776466244",
-      "rankChange": 3,
+      "rankChange": -4,
       "streak": 2
     },
     {
@@ -708,7 +709,7 @@
       "developer": "Com2uS",
       "genre": "스포츠",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2569510/b64deee2243120b3b0d5c3e7ccab244da709254c/header_koreana.jpg?t=1776823299",
-      "rankChange": "new",
+      "rankChange": -20,
       "streak": 2
     },
     {
@@ -717,7 +718,7 @@
       "developer": "Iceflake Studios",
       "genre": "시뮬레이션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/949230/header.jpg?t=1781017670",
-      "rankChange": -21,
+      "rankChange": 5,
       "streak": 5
     },
     {
@@ -726,8 +727,8 @@
       "developer": "FromSoftware, Inc.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1767883716",
-      "rankChange": "new",
-      "streak": 4
+      "rankChange": 5,
+      "streak": 3
     },
     {
       "name": "RimWorld",
@@ -735,7 +736,7 @@
       "developer": "Ludeon Studios",
       "genre": "인디",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/294100/76e0613b8197327299d5dbabb0a7fd7828a689a2/header.jpg?t=1780420333",
-      "rankChange": -37,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -744,7 +745,7 @@
       "developer": "TEAM GWYF",
       "genre": "어드벤처",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/395e6d7972474333a698b26f8aa5597bf38109a1/header.jpg?t=1778274309",
-      "rankChange": -45,
+      "rankChange": -5,
       "streak": 5
     },
     {
@@ -753,7 +754,7 @@
       "developer": "Ghost Town Games Ltd.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/header.jpg?t=1780480581",
-      "rankChange": -9,
+      "rankChange": 7,
       "streak": 5
     },
     {
@@ -762,7 +763,7 @@
       "developer": "KONAMI",
       "genre": "시뮬레이션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1665460/9182eac331f562e4a3aab2384b6759c3e1a95797/header.jpg?t=1780538438",
-      "rankChange": -56,
+      "rankChange": -10,
       "streak": 5
     },
     {
@@ -771,8 +772,8 @@
       "developer": "Alkimia Interactive",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1297900/6bc8c205a107e552f14631524f25cdf88743515a/header.jpg?t=1780965412",
-      "rankChange": "new",
-      "streak": 4
+      "rankChange": -9,
+      "streak": 3
     },
     {
       "name": "REANIMAL",
@@ -789,7 +790,7 @@
       "developer": "Hunter Studio",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2445690/f6619cdbb283b34d8fc5bdd12472127a2efd0866/header.jpg?t=1781770203",
-      "rankChange": -5,
+      "rankChange": -30,
       "streak": 5
     },
     {
@@ -798,7 +799,7 @@
       "developer": "Pugstorm",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/header.jpg?t=1780488019",
-      "rankChange": -7,
+      "rankChange": "new",
       "streak": 1
     },
     {
@@ -807,7 +808,7 @@
       "developer": "Arrowhead Game Studios",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/c30971376c20594452d25bb1d7d6346961bbeefa/header_koreana.jpg?t=1779899567",
-      "rankChange": 10,
+      "rankChange": -8,
       "streak": 5
     },
     {
@@ -825,7 +826,7 @@
       "developer": "ConcernedApe",
       "genre": "인디",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1754692865",
-      "rankChange": -2,
+      "rankChange": "new",
       "streak": 1
     },
     {
@@ -834,7 +835,7 @@
       "developer": "Codemasters",
       "genre": "레이싱",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3059520/76dc8ac45f1bd6dec26e04434ca1c8814e7bb330/header.jpg?t=1780590545",
-      "rankChange": -17,
+      "rankChange": 2,
       "streak": 2
     },
     {
@@ -843,7 +844,7 @@
       "developer": "Team PEAK",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/31bac6b2eccf09b368f5e95ce510bae2baf3cfcd/header.jpg?t=1775581133",
-      "rankChange": 2,
+      "rankChange": "new",
       "streak": 1
     },
     {
@@ -861,7 +862,7 @@
       "developer": "Bandai Namco Studios Inc.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/8518523e6bea615ba8127c6fc215fd1eac966501/header.jpg?t=1779923026",
-      "rankChange": -44,
+      "rankChange": -3,
       "streak": 5
     },
     {
@@ -897,7 +898,7 @@
       "developer": "Game Studio Inc.",
       "genre": "액션",
       "icon": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2244210/b8e37f203537b75576a3180da610a23a72d9c620/header_koreana.jpg?t=1781687351",
-      "rankChange": "new",
+      "rankChange": -12,
       "streak": 2
     }
   ],
@@ -908,7 +909,7 @@
       "developer": "Netmarble",
       "icon": "https://play-lh.googleusercontent.com/eRGPrWXzheZvTiTRBDBuaysX8ptDH5xasKV8rzWmuEKA9WsXfftcybnz9zQB89Iiqx7WKa_naS_WK5DdT1KB",
       "genre": "롤플레잉",
-      "rankChange": "new",
+      "rankChange": 1,
       "streak": 2
     },
     {
@@ -917,7 +918,7 @@
       "developer": "Century Games PTE. LTD.",
       "icon": "https://play-lh.googleusercontent.com/cs59HOM5uSmSzgnmMyFpqYw9sMtQkYxMUTRZ1TSCZK6t6T-cjluQW_9krAcgeEozBYQWKl2DmUTeETdYtKhq",
       "genre": "전략",
-      "rankChange": 3,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -935,7 +936,7 @@
       "developer": "NC Corporation",
       "icon": "https://play-lh.googleusercontent.com/xy6xR7NsdX81HpwWu8CoVkseQECAug3pLvvpdBGtls12xwiQy3Qw5hvQ51fc3oTXPmI8xyOArPnm70t8395Mmdw",
       "genre": "롤플레잉",
-      "rankChange": 4,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -944,7 +945,7 @@
       "developer": "NEXON Company",
       "icon": "https://play-lh.googleusercontent.com/iqpY1xJzA5iIQdnHxk-IOfQFESViwUyTQ1AIwF1_i3kd8sQTTQDrkMLys26QqSb9tG35M5FTw2VjQuCcoe3MJA",
       "genre": "롤플레잉",
-      "rankChange": -3,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -953,7 +954,7 @@
       "developer": "FUNFLY PTE. LTD.",
       "icon": "https://play-lh.googleusercontent.com/pugw09Lkr4dsuVQWRFVp82xe9YXD1ST5wPJRS-aj2Msr5oq297sR0KESQUHLgwR-e5IyHwnqTe_f00FAokXlGMc",
       "genre": "전략",
-      "rankChange": 0,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -962,7 +963,7 @@
       "developer": "Kakao Games Corp.",
       "icon": "https://play-lh.googleusercontent.com/RjBvh4GdUfXniVM5a0jyDkecYGypEG2oL9vIePLrK7wQv245uNVFbyhksw0mo_-wGTHyJs4Nt1SKyxB8kkwq",
       "genre": "시뮬레이션",
-      "rankChange": 13,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -971,7 +972,7 @@
       "developer": "HK KURO GAMES LIMITED",
       "icon": "https://play-lh.googleusercontent.com/kP-iYZI3TL5GzvDKjtjtu2P_POG8sz7NZaP3hOw3WqDcZeZ7YcAQuY-aH8C_4tAPOk7W9rhi4OSZCWIK_e3FA0s",
       "genre": "액션",
-      "rankChange": -5,
+      "rankChange": -2,
       "streak": 5
     },
     {
@@ -980,7 +981,7 @@
       "developer": "Dream Games, Ltd.",
       "icon": "https://play-lh.googleusercontent.com/RBnqZ3q_jjOREX6v49DGe4BzKGNwJMcv8aBNDeDuMRFQdyX6rA7S-k5N39ggj43XeKFGLmxuH1jOYONfbUHmYA",
       "genre": "퍼즐",
-      "rankChange": -2,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -1007,7 +1008,7 @@
       "developer": "Level Infinite",
       "icon": "https://play-lh.googleusercontent.com/JK5mejs0bVT_9613gCxNfCjRw_m3JiQ4wC8B8Kt471yu7ThFQazVkCLTfPZ81hnenft7ilaE-qSwVGpQT6sEFcY",
       "genre": "롤플레잉",
-      "rankChange": -8,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -1016,7 +1017,7 @@
       "developer": "111%",
       "icon": "https://play-lh.googleusercontent.com/FB_eWLkgLjZAb4F16ga2d2iiQdndxd_Zdela2peb65KhPt8R4iBhLkdvzjYn-uHpKrXjMwiYos94zkcBHzzpYAY",
       "genre": "캐주얼",
-      "rankChange": -1,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -1025,7 +1026,7 @@
       "developer": "Kakao Games Corp.",
       "icon": "https://play-lh.googleusercontent.com/65JquVIM391Il8M5oXrUzwTOFvFn72Yef4EJGWLBp190MflgritBJqiMuSjoK_ZeA2jF53OV9rRNgAXRm8_scQ",
       "genre": "롤플레잉",
-      "rankChange": -5,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -1034,7 +1035,7 @@
       "developer": "COGNOSPHERE PTE. LTD.",
       "icon": "https://play-lh.googleusercontent.com/-ZZaqZBQ7EBjH4j0hyHX-0Fu0jUtnoOc-LwydvgQmsXWBZLxyAhxPcmIakzZB7NFurlK4Mj0pbvYe0pHYSuv4p8",
       "genre": "롤플레잉",
-      "rankChange": "new",
+      "rankChange": 4,
       "streak": 2
     },
     {
@@ -1061,7 +1062,7 @@
       "developer": "Playrix",
       "icon": "https://play-lh.googleusercontent.com/Vu_BoGFdNORUCsqu8yyDPg7Re53M06VMyeBRq9a0tuRNLJWFV3glfdoI08mJuVLvwA_tokJqK3elHiK0yBFNGjo",
       "genre": "캐주얼",
-      "rankChange": -1,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -1070,7 +1071,7 @@
       "developer": "NHN Corp.",
       "icon": "https://play-lh.googleusercontent.com/Hv-D0Heegr2EW_eyGcfNv-HzI_WRrjxMqnN575pY17XaRfXA4wjmAtTwWsO_ON6WqVtTP0ajH2bKKRDx6CNXhQ",
       "genre": "카지노",
-      "rankChange": -4,
+      "rankChange": -2,
       "streak": 5
     },
     {
@@ -1079,7 +1080,7 @@
       "developer": "NHN Corp.",
       "icon": "https://play-lh.googleusercontent.com/Imi0dOs8mMcOxNvc4MGXbfdG1QNKgE70v1DYU4GTIXPlbCy5RGoC-XjBRdEwvb-jDGXAXFj9j43c7flORYphv7I",
       "genre": "카지노",
-      "rankChange": -2,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -1088,7 +1089,7 @@
       "developer": "EPIDGames",
       "icon": "https://play-lh.googleusercontent.com/OCiuBv70Dnuw9wcGet3EtTUF2nEkS1vhYYkvOahe9-MmKg6EhxGkf-9ZVxnWIJXflQSmfOIjTcaSbwJSJyuzHA",
       "genre": "롤플레잉",
-      "rankChange": 25,
+      "rankChange": 13,
       "streak": 5
     },
     {
@@ -1097,7 +1098,7 @@
       "developer": "Rhinos",
       "icon": "https://play-lh.googleusercontent.com/9iZHvfP7PP6Hc8kfL0dNANHzjaRQQzzDAiTbpAALAfMNNp5ink50ex2MlamkJtkm9NnqCsJtffC57lpwU_Shmg",
       "genre": "카드",
-      "rankChange": 17,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -1106,7 +1107,7 @@
       "developer": "NC Corporation",
       "icon": "https://play-lh.googleusercontent.com/VvwlyO5rMOgeedcbDmvBQv-vDoCeHqxBdSHqTrA3xUZAEuRcAwTBznrJBwkj3_xvhUTkLJ4D98RT1fZTtu8W",
       "genre": "롤플레잉",
-      "rankChange": 6,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -1124,7 +1125,7 @@
       "developer": "Netmarble",
       "icon": "https://play-lh.googleusercontent.com/O3AtBJqCPmOHow-d2tskDjwXGWpYpgz2bPEJC5s-FQ1BzmtxnFTQ4h6OTTJ74pyih8KBs78UsTk7w6PAHkbt",
       "genre": "롤플레잉",
-      "rankChange": 13,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -1133,7 +1134,7 @@
       "developer": "Dream Games, Ltd.",
       "icon": "https://play-lh.googleusercontent.com/O83j-W51jyftL_iGe0uXLg_aMWlXBDrdN1sbTK6VJ9uYui4lfs6rA1CYXb1SDMFJjZU7LOMygNxySQnBZ9A5Bg",
       "genre": "퍼즐",
-      "rankChange": 2,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -1142,7 +1143,7 @@
       "developer": "Com2uS",
       "icon": "https://play-lh.googleusercontent.com/m0ee9LIppykg3JqKBftJwZPIV0Pl13IVQgeKcSJfDo-zoC2yAFaGbYFFK_k-Z-OXkHO_cV4xITZKrHHVUbzU1A",
       "genre": "스포츠",
-      "rankChange": -5,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -1151,7 +1152,7 @@
       "developer": "Century Games PTE. LTD.",
       "icon": "https://play-lh.googleusercontent.com/zGhriW_zOEdt1u68eybR53bC9kgIHNnsCPSrcf1e8eASpSLPXB9XrRqU25851GV6KmbwOHvVdMMJTE1h5EjD",
       "genre": "캐주얼",
-      "rankChange": -1,
+      "rankChange": -2,
       "streak": 5
     },
     {
@@ -1160,7 +1161,7 @@
       "developer": "NC Corporation",
       "icon": "https://play-lh.googleusercontent.com/aqqsbPuYk-dU9f0qnyEkHje_IIchFrOhDQfDXozQbD5_n_Hxi18ja4GyEbNYuFD9inoFBUYfZFWK4zSOjsy8Aw",
       "genre": "롤플레잉",
-      "rankChange": 16,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -1169,7 +1170,7 @@
       "developer": "Supercell",
       "icon": "https://play-lh.googleusercontent.com/IFACylsXgbKgfNXcLbFrzlNhkB6_5LH3IGNA-frTpTPNolzQxL8mI2B_4jnXe5lTCnQYZYIv9zNTQGWn_8QwLA",
       "genre": "액션",
-      "rankChange": -7,
+      "rankChange": -3,
       "streak": 5
     },
     {
@@ -1178,7 +1179,7 @@
       "developer": "Yostar Limited.",
       "icon": "https://play-lh.googleusercontent.com/58OMjHdJO91jepPVficmQYxhLTI4A82gZj2AqYFLODmIV6ZpruzfAeXdb_xukt28B89cOhjS9Vy4bb1XP5IZA9E",
       "genre": "보드",
-      "rankChange": "new",
+      "rankChange": 7,
       "streak": 2
     },
     {
@@ -1187,7 +1188,7 @@
       "developer": "Supermagic",
       "icon": "https://play-lh.googleusercontent.com/vTxEJvWJq3cIbideJTNd9ZAYolS4ll7hUlMT3piDAsP6y84EPI-k1tPpoALoCwvmbJMn3LBW-sjzhHpERqfY",
       "genre": "전략",
-      "rankChange": -13,
+      "rankChange": -11,
       "streak": 5
     },
     {
@@ -1196,7 +1197,7 @@
       "developer": "Netmarble",
       "icon": "https://play-lh.googleusercontent.com/HgMF0Fq3vKNgPlwm4GzidIh5W7hAY50kmAD1uNLcMywIFNqCnJ5aa88jN3x8mPBhtL8sSoLZlwl8IdMzeH0P7Y4",
       "genre": "롤플레잉",
-      "rankChange": "new",
+      "rankChange": 4,
       "streak": 2
     },
     {
@@ -1205,7 +1206,7 @@
       "developer": "Leniu Technology Co., Limited",
       "icon": "https://play-lh.googleusercontent.com/jZ0P5ZxOE4VorYhs9QmbcxzXi7VYiNqh4I5YlO2JXUdh_5D80ymAagbYxjtP6pGnU_7f_W0gWUVWUm9mIkCI5A",
       "genre": "롤플레잉",
-      "rankChange": -2,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -1223,7 +1224,7 @@
       "developer": "highbrow",
       "icon": "https://play-lh.googleusercontent.com/Ub7Hbq1LusnGf9lR0Spth7mxCzByqE22z9MEBwK--PP1fuh96JazHOboiMADc7Yl1drd8axAa0kOoUyTDy0v",
       "genre": "롤플레잉",
-      "rankChange": -10,
+      "rankChange": -3,
       "streak": 5
     },
     {
@@ -1232,7 +1233,7 @@
       "developer": "Webzen Inc.",
       "icon": "https://play-lh.googleusercontent.com/qnZL-Cen0ZiuBaJFSRkJsW1shxOLzMjGnZUDFRvnPit9WizZ3TiHrq2BFJwtDcnFO-Qk1M4wdxf4gVVZ0fta3g",
       "genre": "롤플레잉",
-      "rankChange": -1,
+      "rankChange": -6,
       "streak": 5
     },
     {
@@ -1241,7 +1242,7 @@
       "developer": "NEXON Company",
       "icon": "https://play-lh.googleusercontent.com/g-kNZiGFSEWFlbQWfctVwFDGTZldjOP6qVktI_PKMqS-I4SwaOWNBegr_wvf2YOpItsdVDrhICW1VWY5IGD1Jg",
       "genre": "스포츠",
-      "rankChange": 4,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -1250,7 +1251,7 @@
       "developer": "JoyTogether Games",
       "icon": "https://play-lh.googleusercontent.com/M77O5ybE4OhcjVTTft8BD-egVMwbkMR82fxUwuG3HCBoIOk0WIF8PoTLTbmtuWEuZPM1Z86GDXV-pGG7G3dEpg",
       "genre": "카드",
-      "rankChange": 43,
+      "rankChange": 10,
       "streak": 5
     },
     {
@@ -1259,7 +1260,7 @@
       "developer": "Microfun Limited",
       "icon": "https://play-lh.googleusercontent.com/DxEYTS_nNDbesjgAGulDTgl8V2cV42UUmeOGPei2c95XRW7GY_XgihSsaPF7rnRua18Egkd1-siIgbkVjq73Hg",
       "genre": "퍼즐",
-      "rankChange": 8,
+      "rankChange": 5,
       "streak": 5
     },
     {
@@ -1268,7 +1269,7 @@
       "developer": "King",
       "icon": "https://play-lh.googleusercontent.com/JvMhIxuwArVmcMReJQB8PIEB1MIQNMGf9j5i914JtkBrHrA55K-nMUIVlYCa7SXAdHtzLtsycEo6NpXeHFxLwvI",
       "genre": "캐주얼",
-      "rankChange": 2,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -1277,7 +1278,7 @@
       "developer": "Netmarble",
       "icon": "https://play-lh.googleusercontent.com/IkNZqliSHoIRoWo-SFO0b8pzt53n1Epi-Tf9p8LbwczkafXbMcuQTpmgpdU-DIKeamrQoyqgRQTars9qnpe0Gg",
       "genre": "롤플레잉",
-      "rankChange": 20,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -1286,7 +1287,7 @@
       "developer": "NEXON Company",
       "icon": "https://play-lh.googleusercontent.com/lrERcCoTm7m8XStnhTHZDVfemQc_vTzCRl4CCBKhvQoBXo-WvmrwiGqONB7daFIJJkT0znGB5EOfgbaNRgiTyQ",
       "genre": "롤플레잉",
-      "rankChange": -30,
+      "rankChange": -4,
       "streak": 5
     },
     {
@@ -1295,7 +1296,7 @@
       "developer": "Cedar Games Studio",
       "icon": "https://play-lh.googleusercontent.com/uVjVMEJrhT-xRoUtKIUj8tOVSbCWw4IsRHaTDYICRNjQycUj6SucVpeoAPiNZWeJ5JuzIt_ZZRo1X1pW6XJFAQE",
       "genre": "퍼즐",
-      "rankChange": 9,
+      "rankChange": 7,
       "streak": 5
     },
     {
@@ -1304,7 +1305,7 @@
       "developer": "RiverGame",
       "icon": "https://play-lh.googleusercontent.com/hzgzep-uxHj_BmXtEsCg-STSs7QF6WfXegQ5ATExUHyY9TYdd4LB2vFFV9s2d_hc8k7jKT3XVvd6Dyw8cfSyJNc",
       "genre": "전략",
-      "rankChange": -5,
+      "rankChange": -3,
       "streak": 5
     },
     {
@@ -1313,7 +1314,7 @@
       "developer": "SuperPlay.",
       "icon": "https://play-lh.googleusercontent.com/BpyKPyeCiAoCtYP23WtOoHW1G_4IAGUyk4G6V_5YNmXomuBwNC5ZnSq5OfxejW-Ufuukma8-UYZirB2wz3m8UnM",
       "genre": "카드",
-      "rankChange": 3,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -1322,7 +1323,7 @@
       "developer": "NEOWIZ corp",
       "icon": "https://play-lh.googleusercontent.com/MkI60z70bUF0YIi9loQzKm08WLinhruANPb6D7j1Gh1iPiLrfL1W-2ZQ0Q8ICCMdkFY0jDlTjx9_iZFVGOourg",
       "genre": "카지노",
-      "rankChange": 0,
+      "rankChange": 5,
       "streak": 5
     },
     {
@@ -1331,7 +1332,7 @@
       "developer": "Wemade Co., Ltd",
       "icon": "https://play-lh.googleusercontent.com/OmmrYyYORMkonxxUu7BR6sl7vdzLgT1mcoysiJUIrwb_6JmF8j7vjXQ7oC_HOTLsoUOIMPGmoHNHVBC8QbqTrQ",
       "genre": "롤플레잉",
-      "rankChange": -11,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -1340,7 +1341,7 @@
       "developer": "Playrix",
       "icon": "https://play-lh.googleusercontent.com/ft9OqNwpLaL45Jq3YuSYt0wm3y_j-YteTQqfq4Cu2PRWTrkFMuhlmUHmxggNxOP96gxR9Q3ML1Yt87iV3zD5fg",
       "genre": "캐주얼",
-      "rankChange": 2,
+      "rankChange": -3,
       "streak": 5
     },
     {
@@ -1349,7 +1350,7 @@
       "developer": "N2E",
       "icon": "https://play-lh.googleusercontent.com/TGl3DdDbi4hty6ooOhEvv_2s5tkpGLbL6derP8y5hK-_Bw--Ve375b08ba9HHQ9ueRpoQ9oye1T_T24BJriLUmw",
       "genre": "롤플레잉",
-      "rankChange": -17,
+      "rankChange": -7,
       "streak": 5
     },
     {
@@ -1358,7 +1359,7 @@
       "developer": "Playrix",
       "icon": "https://play-lh.googleusercontent.com/R57nBnvKx2fcs-Ct1wKW2j85S4f8h2dPsn2L9jO4G0pxZIHRozdwPRZ_tAvT6Kh-P8I7A6CDJFu8cYuvBzccvIU",
       "genre": "캐주얼",
-      "rankChange": 6,
+      "rankChange": 11,
       "streak": 5
     },
     {
@@ -1367,7 +1368,7 @@
       "developer": "PONOS Corporation",
       "icon": "https://play-lh.googleusercontent.com/zWr_DqNTx3s9JnvARIkAv4_putVB35TpXp0RaTYFpUTvgrYUxgJ8wOdlDwU_zJZ4MDH0J93zbr6HPPaGId19lQ",
       "genre": "캐주얼",
-      "rankChange": 23,
+      "rankChange": 33,
       "streak": 5
     },
     {
@@ -1376,7 +1377,7 @@
       "developer": "InFold Games",
       "icon": "https://play-lh.googleusercontent.com/5x2dfdcyMkHFW5RImP8BkNoQoWENWIvKwm2W2iRL8Adln7WLeJZi-JIr8kAJ0rUalVzA4qVS6WNpK7TjQa-3",
       "genre": "시뮬레이션",
-      "rankChange": "new",
+      "rankChange": 14,
       "streak": 2
     },
     {
@@ -1394,7 +1395,7 @@
       "developer": "NEXON Company",
       "icon": "https://play-lh.googleusercontent.com/JfGzWE_v-KjofJoJ9eo1oBixex2sHlrSbSte4UG2g6CWDkolbvxI1qV2M_E1JgbjNeDcOrvrTYS7ko1Bb7TPmA",
       "genre": "롤플레잉",
-      "rankChange": -11,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -1403,7 +1404,7 @@
       "developer": "NEOWIZ",
       "icon": "https://play-lh.googleusercontent.com/EU57oDE8N2ZfMo3ina1NN37ZKhrG5_OJ7a7a2R_DsLLRUHFQJI6vM3e780DCIJ43DpEeUi_r8c82bs7G-a7j",
       "genre": "롤플레잉",
-      "rankChange": -1,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -1412,7 +1413,7 @@
       "developer": "Netmarble",
       "icon": "https://play-lh.googleusercontent.com/hEsBJTaH7At6ftH03ozxXvBxaeIVN_lAdlBIFGZJj-Yhozr7lDJtw4CAPvckCrw1elZZ3dVxx3mVpc7L7uy5_XY",
       "genre": "롤플레잉",
-      "rankChange": -16,
+      "rankChange": -2,
       "streak": 5
     },
     {
@@ -1421,7 +1422,7 @@
       "developer": "NC Corporation",
       "icon": "https://play-lh.googleusercontent.com/bh67_a9Z2UyAoJHcktORocXm_c25UcWz_diX4kuGbQ2W1tbWwzK1QqapGahZrlDmwWCAp-CFoy9NA2KMYojBAik",
       "genre": "롤플레잉",
-      "rankChange": 7,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -1430,7 +1431,7 @@
       "developer": "NHN Corp.",
       "icon": "https://play-lh.googleusercontent.com/CqdDCCaoUKuuANbhIfbCWehb2UTPN6YPbucx6KUzurF6WebH10KPaG46AG-fBCl9w1hAnOqbr2psIJtQFoUOaHw",
       "genre": "카드",
-      "rankChange": -5,
+      "rankChange": 5,
       "streak": 5
     },
     {
@@ -1439,7 +1440,7 @@
       "developer": "Com2uS",
       "icon": "https://play-lh.googleusercontent.com/E0h6-P9lKwA9s0i7ggU2ewrk8qAn2Y13d77ydsEm9mq9dAXjqE-ZKkBHr8SiVEUKZEDZDThfoD6rezD_dXF9X2s",
       "genre": "스포츠",
-      "rankChange": 8,
+      "rankChange": 10,
       "streak": 5
     },
     {
@@ -1457,7 +1458,7 @@
       "developer": "Riot Games, Inc",
       "icon": "https://play-lh.googleusercontent.com/wy8xCVA9q2_1cO6N8i3aVthK3U5BVUadpFAhW560Z-zTr6iU8eACjNkKVl1TX1VPzxsPpj2vz6pwDK682m16K1o",
       "genre": "전략",
-      "rankChange": -32,
+      "rankChange": -30,
       "streak": 5
     },
     {
@@ -1466,7 +1467,7 @@
       "developer": "COGNOSPHERE PTE. LTD.",
       "icon": "https://play-lh.googleusercontent.com/YQqyKaXX-63krqsfIzUEJWUWLINxcb5tbS6QVySdxbS7eZV7YB2dUjUvX27xA0TIGtfxQ5v-tQjwlT5tTB-O",
       "genre": "어드벤처",
-      "rankChange": -42,
+      "rankChange": -3,
       "streak": 5
     },
     {
@@ -1475,7 +1476,7 @@
       "developer": "Niantic, Inc.",
       "icon": "https://play-lh.googleusercontent.com/N3ayE1feuNfItNVRR7m6tTk7Wqnn6tNy0elJ8kdV3ITwgKBvHH0dk1e_vup8yFfzvlwPclduzsB8ZsqFBMjJEw",
       "genre": "어드벤처",
-      "rankChange": -6,
+      "rankChange": 4,
       "streak": 5
     },
     {
@@ -1484,7 +1485,7 @@
       "developer": "Netmarble",
       "icon": "https://play-lh.googleusercontent.com/_ocPd2cOaJUvE8cCFsq-co5DBJO6bcAXXmcp6PGyTh9DqIqvo0Tgtx_dnVTz2Edz7MhUJbX7wJcmiPUGxHDG310",
       "genre": "롤플레잉",
-      "rankChange": -34,
+      "rankChange": -9,
       "streak": 5
     },
     {
@@ -1493,7 +1494,7 @@
       "developer": "FunPlus International AG",
       "icon": "https://play-lh.googleusercontent.com/WmiabVKJbL5xHsZU8SI5ITa2xBcHWgSapPdOcy5iTuFEqdTvwXjzcDqp8RYqmz5cPDUZote9sCEh1xDtwSZOxm4",
       "genre": "전략",
-      "rankChange": -14,
+      "rankChange": -13,
       "streak": 5
     },
     {
@@ -1502,7 +1503,7 @@
       "developer": "Magmatic Games LTD",
       "icon": "https://play-lh.googleusercontent.com/_YoJBEqLA6qZ0xiulFJWKfubaZmxzyphcW4BwMIXFapkO3ifyuVsnMaLkWQClMPuUnahVtIAtyU_baUHLOdP2A",
       "genre": "퍼즐",
-      "rankChange": -7,
+      "rankChange": 2,
       "streak": 5
     },
     {
@@ -1511,7 +1512,7 @@
       "developer": "COGNOSPHERE PTE. LTD.",
       "icon": "https://play-lh.googleusercontent.com/aWrGocSA7hEuk1qAPe7L4T57LvLKrwwH26cK2_LOqxRQMQX7j3uHYojC-EKWgYEV2PdrmE0ahqvvhLhXrAGk6Q",
       "genre": "어드벤처",
-      "rankChange": -34,
+      "rankChange": -14,
       "streak": 5
     },
     {
@@ -1520,7 +1521,7 @@
       "developer": "HongKong GameTree Limited",
       "icon": "https://play-lh.googleusercontent.com/87N6LsrOVj9wajrilYfvHlUbEnNCFTwlv95YYXbfM8-KdSQl2sooZFIuceNgd6tfg4yEeglne8MnHB4qHSjkBw",
       "genre": "어드벤처",
-      "rankChange": -8,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -1529,7 +1530,7 @@
       "developer": "Project Moon",
       "icon": "https://play-lh.googleusercontent.com/mnqUeIK2w48bqiVf9w3h-6w0SuHrwx1Xh5DFhHHjgcu9x29qGIzs4EO9QeWtmZ42YzPOC29uU2Q73h25Nz9PCQ",
       "genre": "전략",
-      "rankChange": -45,
+      "rankChange": -7,
       "streak": 5
     },
     {
@@ -1538,7 +1539,7 @@
       "developer": "Happibits Game",
       "icon": "https://play-lh.googleusercontent.com/eAeYjdl3YeCgqPktbVbMp5APjT1QaCwI1dNEnTXoM2bmcx1KJykj7GDTFuPwIYara9BItd22stpDtydbyenrbg",
       "genre": "시뮬레이션",
-      "rankChange": -4,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -1547,7 +1548,7 @@
       "developer": "Joy Nice Games",
       "icon": "https://play-lh.googleusercontent.com/vre365L9Y_XIpaTg56Mqa3Oraobas7RMsHl52ZJuyyShZNWdPg8fbkQjWCHu1hTJ0TE4DaY_vbuDUkUi9u8P",
       "genre": "롤플레잉",
-      "rankChange": 9,
+      "rankChange": 19,
       "streak": 5
     },
     {
@@ -1556,7 +1557,7 @@
       "developer": "JOYCITY Corp.",
       "icon": "https://play-lh.googleusercontent.com/lCe1gmPZFYWVAC9SART7Bm4AFDPNRmxteII5Qa417kZVxBgpKdbXbgDaGLLpRevIPyPcQj7W-dLvDdBMmm_ceA",
       "genre": "롤플레잉",
-      "rankChange": 5,
+      "rankChange": 4,
       "streak": 5
     },
     {
@@ -1565,7 +1566,7 @@
       "developer": "Lessmore GmbH",
       "icon": "https://play-lh.googleusercontent.com/WGcdbzoUWweXOg3knrsZFyDCqODfblSjIsyDdsEnYot1DBdq4_p38QYN5z-vgS6LyphN5C8HPfSKQyEa6LGAUAk",
       "genre": "전략",
-      "rankChange": 22,
+      "rankChange": 4,
       "streak": 5
     },
     {
@@ -1574,7 +1575,7 @@
       "developer": "NHN Corp.",
       "icon": "https://play-lh.googleusercontent.com/BmlHi1FAGn5ZWCM13EAAS5K9AToZ1i9Ok10HWoQgaoZMFttJrbHTZUb0Z5zvbxH3xSYVaJ0s4HMUaP2Ko7HKouE",
       "genre": "카드",
-      "rankChange": -4,
+      "rankChange": 1,
       "streak": 5
     },
     {
@@ -1592,7 +1593,7 @@
       "developer": "The Pokémon Company",
       "icon": "https://play-lh.googleusercontent.com/CpBUPy9eZPB-lVJzVtVtwE6IPvNbr6hvxwcLDkcw4_LXJd6HYh0nBl37AwjZOWB4IecEM3PcPoYcvd-T6JYldz4",
       "genre": "전략",
-      "rankChange": "new",
+      "rankChange": 22,
       "streak": 2
     },
     {
@@ -1601,7 +1602,7 @@
       "developer": "KRAFTON, Inc.",
       "icon": "https://play-lh.googleusercontent.com/bqliWUqt7QfpSC4EybIXMT_QZclpYN9ANItoMTXltshu8v0HTnFdfU_pboHzz7Zs7pqX1AfLE7eFVU8S0aSI",
       "genre": "액션",
-      "rankChange": -15,
+      "rankChange": -5,
       "streak": 5
     },
     {
@@ -1610,7 +1611,7 @@
       "developer": "HAEGIN Co., Ltd.",
       "icon": "https://play-lh.googleusercontent.com/R2aEIXiVL_Zs07_XCpViKsze6-BA8AneOvl3vVNHkzSBJ0ts3uA-xxAC9jyZYgFQUeiOd2PEcFoTaZEOXBcSd3w",
       "genre": "스포츠",
-      "rankChange": 5,
+      "rankChange": -4,
       "streak": 5
     },
     {
@@ -1619,7 +1620,7 @@
       "developer": "NEOWIZ corp",
       "icon": "https://play-lh.googleusercontent.com/mmbQgY03HJqIAlBxGxYGj14vR4KCX7XSda7ocCfaoGHJHprsBBb5Wg300TpAiBlcNWBz-4QCw5vS54vjY8wvAA",
       "genre": "카드",
-      "rankChange": -10,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -1628,7 +1629,7 @@
       "developer": "Bandai Namco Entertainment Inc.",
       "icon": "https://play-lh.googleusercontent.com/umWX9qJUcTLA-QIkGeYL_dxhLyDQc4UYYXMwC2MV4Pde2ti_TIOE_mzv6Wafm5SYAA7ZTBCuw27tDM_yfBPxRMY",
       "genre": "시뮬레이션",
-      "rankChange": -25,
+      "rankChange": -15,
       "streak": 5
     },
     {
@@ -1637,7 +1638,7 @@
       "developer": "VoyagerOne IE",
       "icon": "https://play-lh.googleusercontent.com/5mzN7_uKeXNnloF-zlXGxiwKuepToEdRwbFUK_aQqk7ORLUGPsMwQK__J9IL9DBMWty-zuLvZ4FYHikK2xCttIw",
       "genre": "캐주얼",
-      "rankChange": 8,
+      "rankChange": 7,
       "streak": 5
     },
     {
@@ -1646,7 +1647,7 @@
       "developer": "BillionaireGames",
       "icon": "https://play-lh.googleusercontent.com/32hdADT1diPHMRQB8Yc9hWNLeSKpUVAn1_289IXeYZ8IijrbPvvI-TlQIzN9Gyk2e_nONde2DaM9zKNyX_na4R4",
       "genre": "롤플레잉",
-      "rankChange": -3,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -1655,7 +1656,7 @@
       "developer": "NHN Corp.",
       "icon": "https://play-lh.googleusercontent.com/XHtjYtNFcuJriJ9NiA_X_U6mGQDeViNj-sz0zheNPE4YpByJxXSH5b7JblGVfN7aVyPhdOt1rfIuYetBwTyx",
       "genre": "카지노",
-      "rankChange": -7,
+      "rankChange": -4,
       "streak": 5
     },
     {
@@ -1664,7 +1665,7 @@
       "developer": "Netmarble",
       "icon": "https://play-lh.googleusercontent.com/RN9j8xmlp4mgSqYYJ9ZV2Tjm07kxwxOFlgm7o4FICph-7o_-Bt8yTxNV8TvadY9iUEZ4JXNN08AEGML9XEjdpQ",
       "genre": "롤플레잉",
-      "rankChange": -12,
+      "rankChange": -20,
       "streak": 5
     },
     {
@@ -1673,7 +1674,7 @@
       "developer": "NEXON Company",
       "icon": "https://play-lh.googleusercontent.com/RrpE9xexrHMDDOY6iel-UPFl-N8J-kL0wmbd1rYCP7Boq8_dPtnasme48dw7Ma1k2GYDsvmSuHqWeMCY_TqVCw",
       "genre": "레이싱",
-      "rankChange": -20,
+      "rankChange": -5,
       "streak": 5
     },
     {
@@ -1682,7 +1683,7 @@
       "developer": "BLANCOZONE NETWORK CO., LIMITED",
       "icon": "https://play-lh.googleusercontent.com/avcK8XZwrVNYHfRnPspGYRhO2WXQFLud9ksPRUEV3qguhCzgql-UoFOkAMrAyAu93dI3_eBtpiKSO_y36dxOZyo",
       "genre": "롤플레잉",
-      "rankChange": 13,
+      "rankChange": -1,
       "streak": 5
     },
     {
@@ -1691,7 +1692,7 @@
       "developer": "FunPlus International AG",
       "icon": "https://play-lh.googleusercontent.com/s0BYl3XzwvKGfma3ZftsmchXs7rCsyDKHJ7LTB6E3kY_WRorvEKg4cRawg0r2Ac0ZIbZ90VcEkI3UsUvdHlt4fg",
       "genre": "전략",
-      "rankChange": -14,
+      "rankChange": -5,
       "streak": 5
     },
     {
@@ -1700,7 +1701,7 @@
       "developer": "KONAMI",
       "icon": "https://play-lh.googleusercontent.com/-an3zySx6j39CpLwZkIH26KfCvJPGmp974714U9HshiCb1W9NwFwULhNANcUSic9n1Mb1GDkVP6gBpjwLDs5UA",
       "genre": "스포츠",
-      "rankChange": -17,
+      "rankChange": -18,
       "streak": 5
     },
     {
@@ -1709,7 +1710,7 @@
       "developer": "Volcanus Studio Co.,Ltd.",
       "icon": "https://play-lh.googleusercontent.com/zEEudX1fsJrptMAsNANO73st4FOsKX4R3724V187kYmRHoDW4XD5Exu7-Gpr57iMVziG9w0OyWUASRmXbYuNaw",
       "genre": "시뮬레이션",
-      "rankChange": "new",
+      "rankChange": -3,
       "streak": 4
     },
     {
@@ -1718,7 +1719,7 @@
       "developer": "XD Entertainment Co., Ltd.",
       "icon": "https://play-lh.googleusercontent.com/FtZNAkKn4faEpRU4UjtRRUk-aQP5zwiN1Kg4FzAcQBN7S8-PfDo7ODxmjaPlMu3HOFJ6-1WhzXxwKA6q1bOw",
       "genre": "시뮬레이션",
-      "rankChange": 7,
+      "rankChange": 9,
       "streak": 2
     },
     {
@@ -1736,7 +1737,7 @@
       "developer": "Netmarble",
       "icon": "https://play-lh.googleusercontent.com/mHJqRu4jWQURdoJTkJYcqPvd1atYDkx4EGEuv3olhT8MFdDW1jYNGyFLmOkr8plJmQZmmSc7v744iYJk09Nc7A",
       "genre": "롤플레잉",
-      "rankChange": -29,
+      "rankChange": 3,
       "streak": 5
     },
     {
@@ -1745,7 +1746,7 @@
       "developer": "Devsisters Corporation",
       "icon": "https://play-lh.googleusercontent.com/J1zzZf_Clyg51sikuBbfTMD_sGVK64Ki5vyVtn3MmkUUzQ-AxKWq2-WuVDnpkrpai6Icun3wXspttadNAxy4djI",
       "genre": "롤플레잉",
-      "rankChange": -7,
+      "rankChange": 0,
       "streak": 5
     },
     {
@@ -1754,7 +1755,7 @@
       "developer": "NEXON Company",
       "icon": "https://play-lh.googleusercontent.com/2azYxmt1KWR-zcaD3AqkCmocsR5CeFIK_9iTJQxH1IE9ezytK5cL4cxB6KlhwijHUF1m8BgI8aly7Er4P0gUig",
       "genre": "롤플레잉",
-      "rankChange": -10,
+      "rankChange": -7,
       "streak": 5
     },
     {
@@ -1763,7 +1764,7 @@
       "developer": "Smilegate, Inc.",
       "icon": "https://play-lh.googleusercontent.com/khhEfCaE7oXzhA2a_s0r0GOuI3bxUrEkAmrTOpp6TrJH123qelDdKknrQhEsnZRdJ21Y-xa4A4nf-o6XhvfFqqQ",
       "genre": "롤플레잉",
-      "rankChange": -27,
+      "rankChange": -4,
       "streak": 5
     },
     {
@@ -1772,7 +1773,7 @@
       "developer": "Com2uS",
       "icon": "https://play-lh.googleusercontent.com/MUCpc9V1KmbWYb2Cv6p3aSVyzBo-uuG_iMPWY0vZSRh9cpDadSM07vaWHJXE6Yrpxj-wH1y55mO6Bo6B3_2k",
       "genre": "롤플레잉",
-      "rankChange": -14,
+      "rankChange": -13,
       "streak": 5
     },
     {
@@ -1781,7 +1782,7 @@
       "developer": "Playrix",
       "icon": "https://play-lh.googleusercontent.com/xCNnX62AirslBmOf5Zp2fySAT9S9XsMUAK3PUGeLVCO4uYHGvfG8lHEof253BQ2q1vS85qsySHt8imuLfIMw",
       "genre": "퍼즐",
-      "rankChange": -7,
+      "rankChange": -3,
       "streak": 5
     },
     {
@@ -1790,7 +1791,7 @@
       "developer": "Zempot INC.",
       "icon": "https://play-lh.googleusercontent.com/QQVS3cmt_fMF91ecz8fHExUP_VJUty-9dCmA7sOZQR3086-4nD-2ANOA2cOkFeiHt5eFW55CZJGpiaO_BahNZA",
       "genre": "카지노",
-      "rankChange": -11,
+      "rankChange": -2,
       "streak": 5
     },
     {
