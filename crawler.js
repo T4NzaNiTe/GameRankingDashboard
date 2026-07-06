@@ -7,8 +7,8 @@ import * as cheerio from 'cheerio';
 import { execSync } from 'child_process';
 
 const SERVICE_ACCOUNT_FILE = './credentials.json';
-const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1ONFeWZTqMXIsWtx9xoRYxcW7lTde56yfvyKUXDi8c3c/edit?gid=1490331569#gid=1490331569';
-const DASHBOARD_URL = 'https://2Khaz.github.io/game-rank-dashboard/';
+const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1klQjpJTl9k3UTM_kSSEHp0LTzDIXMNWRKP1apZ_n_C0/edit?gid=0#gid=0';
+const DASHBOARD_URL = 'https://T4NzaNiTe.github.io/GameRankingDashboard/';
 const spreadsheetId = SPREADSHEET_URL.match(/\/d\/([a-zA-Z0-9-_]+)/)[1];
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
